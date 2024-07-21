@@ -149,6 +149,7 @@
       sway-contrib.grimshot # screenshot tool
       #wayrecord  # screenrecord tool
       alejandra
+      nixd
     ];
   };
 
