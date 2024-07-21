@@ -18,7 +18,13 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, aagl, ... } @ inputs: {
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    aagl,
+    ...
+  } @ inputs: {
     imports = [
       ./vscodium-project/flake.nix
     ];
@@ -38,7 +44,7 @@
           }
 
           {
-            imports = [ aagl.nixosModules.default ];
+            imports = [aagl.nixosModules.default];
             nix.settings = aagl.nixConfig;
             programs.anime-game-launcher.enable = true; # Adds launcher and /etc/hosts rules
             programs.honkers-launcher.enable = true;

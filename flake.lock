@@ -12,7 +12,7 @@
       "original": {
         "owner": "nix-community",
         "repo": "NUR",
-        "type": "github"
+        "type": "github" 
       }
     },
     "aagl": {
