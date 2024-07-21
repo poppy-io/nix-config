@@ -8,9 +8,11 @@
       (nerdfonts.override {
         fonts = [
           "IosevkaTerm"
-          "IosevkaTermSlab"          
+          "IosevkaTermSlab"
         ];
       })
+      noto-fonts-emoji
+      noto-fonts
     ];
 
     fontconfig = {
