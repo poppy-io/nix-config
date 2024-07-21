@@ -1,6 +1,9 @@
-{ config, pkgs, lib, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   home.username = "poppy";
   home.homeDirectory = "/home/poppy";
 
@@ -33,12 +36,12 @@
         };
       };
 
-      keybindings =
-        let
-          modifier = config.wayland.windowManager.sway.config.modifier;
-          grimshot = pkgs.sway-contrib.grimshot;
-          xdg-user-dir = "~/pictures";
-        in lib.mkOptionDefault {
+      keybindings = let
+        modifier = config.wayland.windowManager.sway.config.modifier;
+        grimshot = pkgs.sway-contrib.grimshot;
+        xdg-user-dir = "~/pictures";
+      in
+        lib.mkOptionDefault {
           ## Screenshot
           "Print" = "exec ${grimshot} --notify save screen ${xdg-user-dir}/$(TZ=utc date +'screenshot_%Y-%m-%d-%H%M%S.%3N.png')"; # All visible outputs
           "Shift+Print" = "exec ${grimshot} --notify save area ${xdg-user-dir}/$(TZ=utc date +'screenshot_%Y-%m-%d-%H%M%S.%3N.png')"; # Manually select a region
@@ -107,7 +110,6 @@
         njpwerner.autodocstring
         mattn.lisp
         mathiasfrohlich.kotlin
-        kamadorueda.alejandra
       ];
     };
   };
@@ -121,8 +123,8 @@
       XDG_CACHE_HOME = config.xdg.cacheHome;
       XDG_DATA_HOME = config.xdg.dataHome;
       XDG_STATE_HOME = config.xdg.stateHome;
-      NIXOS_OZONE_WL = "1";  # required by VSCode under wayland
-      LD_LIBRARY_PATH = "/run/opengl-driver/lib:/run/opengl-driver-32/lib";  # should be done automatically but make explicit just in case
+      NIXOS_OZONE_WL = "1"; # required by VSCode under wayland
+      LD_LIBRARY_PATH = "/run/opengl-driver/lib:/run/opengl-driver-32/lib"; # should be done automatically but make explicit just in case
     };
 
     packages = with pkgs; [
@@ -141,11 +143,12 @@
       })
       xdelta
       p7zip
-      adwaita-icon-theme  # for lutris
+      adwaita-icon-theme # for lutris
       ungoogled-chromium
       xivlauncher
-      sway-contrib.grimshot  # screenshot tool
+      sway-contrib.grimshot # screenshot tool
       #wayrecord  # screenrecord tool
+      alejandra
     ];
   };
 
