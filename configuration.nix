@@ -81,11 +81,11 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
-    github-desktop # leave me alone
     curl
     wget
     swayfx
     transmission_4-gtk
+    nixd
   ];
 
   programs.steam = {

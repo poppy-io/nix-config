@@ -80,11 +80,12 @@
         nrb = "sudo nixos-rebuild switch";
       };
     };
-@recommended:languages 
+
+    vscode = {
       enable = true;
       package = pkgs.vscodium;
       extensions = with pkgs.vscode-extensions; [
-        bbenoist.nix
+        jnoortheen.nix-ide
         ms-python.python
         ms-python.isort
         ms-python.debugpy
@@ -106,6 +107,7 @@
         njpwerner.autodocstring
         mattn.lisp
         mathiasfrohlich.kotlin
+        kamadorueda.alejandra
       ];
     };
   };
