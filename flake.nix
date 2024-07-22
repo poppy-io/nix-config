@@ -40,7 +40,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.users.poppy = import ./home.nix;
+            home-manager.users.poppy = import ./poppy/home.nix;
           }
 
           {
