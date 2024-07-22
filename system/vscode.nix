@@ -26,6 +26,6 @@
         mattn.lisp
         mathiasfrohlich.kotlin
       ];
-    });
+    })
   ];
 }
