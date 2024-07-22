@@ -4,10 +4,6 @@
   lib,
   ...
 }: {
-  imports = [
-    ./fonts.nix
-  ];
-
   home.username = "poppy";
   home.homeDirectory = "/home/poppy";
 

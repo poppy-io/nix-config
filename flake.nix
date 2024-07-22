@@ -26,7 +26,7 @@
     ...
   } @ inputs: {
     imports = [
-      ./vscodium-project/flake.nix
+      ./system/system.nix
     ];
 
     nixosConfigurations = {
