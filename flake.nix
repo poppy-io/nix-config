@@ -26,6 +26,8 @@
     ...
   } @ inputs: {
     nixosConfigurations = {
+      nixpkgs.config.allowUnfree = true;
+
       poppy-nix = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
