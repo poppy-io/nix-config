@@ -4,7 +4,7 @@
   lib,
   ...
 }: {
-  wayland.windowManager.sway.keybindings = let
+  wayland.windowManager.sway.config.keybindings = let
     modifier = config.wayland.windowManager.sway.config.modifier;
     grimshot = pkgs.sway-contrib.grimshot;
     xdg-user-dir = "~/pictures";
