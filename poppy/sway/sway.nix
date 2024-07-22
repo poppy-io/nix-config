@@ -10,6 +10,7 @@
     ./inputs.nix
   ];
 
+  # tiling window manager. replaced with swayfx under the hood (probably)
   wayland.windowManager.sway = {
     enable = true;
     systemd.enable = true;
@@ -21,4 +22,13 @@
       window.titlebar = false;
     };
   };
+
+  # notification system for sway
+  services.mako = {
+    enable = true;
+  };
+
+  home.packages = with pkgs; [
+    clipman
+  ];
 }

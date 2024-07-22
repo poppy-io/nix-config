@@ -29,7 +29,7 @@
     })
 
     alejandra # nix formatter
-    nixd # community nix language server
+    nil # nix language server
     gh # github cli
     jq # json
   ];
