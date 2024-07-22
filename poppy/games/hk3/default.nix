@@ -11,11 +11,5 @@ in
         inherit customIcon;
       };
     });   
-  }
-
-  home.packages = with pkgs; [
-    (aliasToPackage {
-        hi3 = "${config.programs.honkers-launcher.package}/bin/honkers-launcher --run-game";
-    })
-  ];
+  };
 }
