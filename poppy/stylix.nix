@@ -1,5 +1,8 @@
 { ... }: {
-    stylix.targets = {
-        kitty.variant256Colors = true;
+  stylix.targets = {
+    kitty = {
+      enable = true;
+      variant256Colors = true;
     }
+  }
 }

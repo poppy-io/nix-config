@@ -10,6 +10,6 @@ in
       unwrapped = old.unwrapped.override {
         inherit customIcon;
       };
-    });   
+    });
   };
 }
