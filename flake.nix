@@ -43,14 +43,6 @@
 
             home-manager.users.poppy = import ./poppy/home.nix;
           }
-
-          {
-            imports = [aagl.nixosModules.default];
-            nix.settings = aagl.nixConfig;
-            programs.anime-game-launcher.enable = true; # Adds launcher and /etc/hosts rules
-            programs.honkers-launcher.enable = true;
-            programs.sleepy-launcher.enable = true;
-          }
         ];
       };
     };
