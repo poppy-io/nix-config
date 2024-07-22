@@ -4,6 +4,7 @@
     ./networking.nix
     ./steam.nix
     ./boot.nix
+    ./stylix.nix
   ];
 
   security.polkit.enable = true;

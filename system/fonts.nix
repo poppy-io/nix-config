@@ -11,6 +11,9 @@
       })
       noto-fonts-emoji
       noto-fonts
+      prociono
+      eurofurence
+      manrope
     ];
 
     fontconfig = {
@@ -25,11 +28,13 @@
         ];
 
         sansSerif = [
+          "Manrope"
           "IosevkaTerm Nerd Font"
           "Sarasa Gothic"
         ];
 
         serif = [
+          "Prociono"
           "IosevkaTermSlab Nerd Font"
           "Sarasa Gothic"
         ];

@@ -17,7 +17,7 @@
     config = rec {
       modifier = "Mod4";
       terminal = "kitty";
-      startup = [{command = "discord";}];
+      startup = [{command = "vesktop";}];
       window.titlebar = false;
     };
   };
