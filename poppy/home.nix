@@ -7,6 +7,7 @@
     ./sway/sway.nix
     ./vscode.nix
     ./git.nix
+    ./spotify.nix
   ];
 
   home.username = "poppy";
@@ -43,7 +44,7 @@
     packages = with pkgs; [
       kitty
       wmenu
-      discord
+      vesktop
       clinfo
       wineWowPackages.waylandFull
       winetricks

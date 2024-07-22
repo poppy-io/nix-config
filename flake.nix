@@ -6,6 +6,7 @@
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     NUR.url = "github:nix-community/NUR";
+    stylix.url = "github:danth/stylix";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -28,6 +29,7 @@
     nixosConfigurations = {
       poppy-nix = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = {inherit inputs;};
         modules = [
           ./configuration.nix
           ./system/system.nix
