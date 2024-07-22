@@ -6,6 +6,7 @@
   imports = [
     ./sway/sway.nix
     ./vscode.nix
+    ./git.nix
   ];
 
   home.username = "poppy";
