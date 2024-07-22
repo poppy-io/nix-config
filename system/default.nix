@@ -6,6 +6,7 @@
     ./boot.nix
     ./stylix.nix
     ./vscode.nix
+    ./greetd.nix
     ./games
   ];
 
@@ -24,9 +25,8 @@
 
   xdg.portal.extraPortals = with pkgs; [
     xdg-desktop-portal-wlr
-    xdg-desktop-portal-gtk
   ];
-  xdg.portal.config.common.default = ["wlr" "gtk"];
+  xdg.portal.config.common.default = "wlr";
 
   # Enable sound.
   hardware.pulseaudio.enable = true;
