@@ -25,21 +25,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "poppy-nix"; # Define your hostname.
-  networking.nameservers = [
-    "1.1.1.1"
-    "9.9.9.9"
-  ];
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
-
   # Set your time zone.
   time.timeZone = "Europe/London";
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
@@ -49,16 +36,8 @@
     useXkbConfig = true; # use xkb.options in tty.
   };
 
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb.layout = "gb";
-  services.xserver.xkb.variant = "intl";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
   xdg.portal.extraPortals = with pkgs; [
     xdg-desktop-portal-wlr
-    xdg-desktop-portal-kde
     xdg-desktop-portal-gtk
   ];
   xdg.portal.config.common.default = "gtk";
@@ -88,19 +67,6 @@
     transmission_4-gtk
   ];
 
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    localNetworkGameTransfers.openFirewall = true;
-    # package = pkgs.steam.override {
-    #  withPrimus = true;
-    #  withJava = true;
-    #  extraPkgs = pkgs: [ bumblebee glxinfo ];
-    # };
-    gamescopeSession.enable = true;
-  };
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -111,6 +77,7 @@
 
   # List services that you want to enable:
   # services.flatpak.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
