@@ -13,6 +13,14 @@
       sha256 = "4ehXDzIBPCkqO5u0zNNaWsgvM0gR9qZP8SbKYAjdOas=";
     };
     polarity = "light";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/zenburn.yaml";
+
+    opacity = {
+      applications = 0.7;
+      desktop = 0.7;
+      popups = 0.6;
+      terminal = 0.7;
+    }
 
     fonts = {
       serif = {
