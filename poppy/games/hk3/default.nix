@@ -6,7 +6,7 @@ in
 {
   programs.honkers-launcher = {
     enable = true;
-    package = with pkgs; aaglPkgs.honkers-launcher.override (old: {
+    package = aaglPkgs.honkers-launcher.override (old: {
       unwrapped = old.unwrapped.override {
         inherit customIcon;
       };
