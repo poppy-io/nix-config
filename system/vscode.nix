@@ -27,5 +27,10 @@
         mathiasfrohlich.kotlin
       ];
     })
+
+    alejandra # nix formatter
+    nixd # community nix language server
+    gh # github cli
+    jq # json
   ];
 }
