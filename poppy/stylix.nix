@@ -1,5 +1,5 @@
 { ... }: {
     stylix.targets = {
-        vscode.enable = false;
+        kitty.variant256Colors = true;
     }
 }

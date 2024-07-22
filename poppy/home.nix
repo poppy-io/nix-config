@@ -7,7 +7,6 @@
     ./sway/sway.nix
     ./git.nix
     ./spotify.nix
-    ./vscode.nix
   ];
 
   home.username = "poppy";
