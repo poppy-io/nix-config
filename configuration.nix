@@ -10,7 +10,6 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./system/system.nix
   ];
 
   nix.settings = {
@@ -22,8 +21,6 @@
   security.polkit.enable = true;
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   # Set your time zone.
   time.timeZone = "Europe/London";
