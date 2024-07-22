@@ -5,10 +5,8 @@
 }: {
   imports = [
     ./sway/sway.nix
-    ./vscode.nix
     ./git.nix
     ./spotify.nix
-    ./games
   ];
 
   home.username = "poppy";

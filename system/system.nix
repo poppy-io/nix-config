@@ -5,6 +5,8 @@
     ./steam.nix
     ./boot.nix
     ./stylix.nix
+    ./vscode.nix
+    ./games
   ];
 
   security.polkit.enable = true;
