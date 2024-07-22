@@ -10,6 +10,7 @@
 
     image = pkgs.fetchurl {
       url = "https://img3.gelbooru.com/images/19/9e/199ead05a0eee4d85d4f65076a379a28.jpg";
+      sha256 = "4ehXDzIBPCkqO5u0zNNaWsgvM0gR9qZP8SbKYAjdOas=";
     };
     polarity = "light";
 
