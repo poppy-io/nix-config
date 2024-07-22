@@ -5,6 +5,7 @@
     ./steam.nix
     ./boot.nix
     ./stylix.nix
+    ./vscode.nix
     ./games
   ];
 
