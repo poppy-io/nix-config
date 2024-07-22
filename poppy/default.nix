@@ -63,8 +63,8 @@
       #wayrecord  # screenrecord tool
       alejandra
       nixd
-      gh
-      jq
+      gh  # github cli
+      jq  # json
     ];
   };
 
