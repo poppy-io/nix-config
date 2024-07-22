@@ -15,7 +15,6 @@
 
   programs = {
     home-manager.enable = true;
-    home-manager.backupFileExtension = "backup";
 
     bash = {
       enable = true;
