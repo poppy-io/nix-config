@@ -32,7 +32,7 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./configuration.nix
-          ./system/system.nix
+          ./system
 
           home-manager.nixosModules.home-manager
           {
@@ -41,7 +41,7 @@
 
             home-manager.backupFileExtension = "backup";
 
-            home-manager.users.poppy = import ./poppy/home.nix;
+            home-manager.users.poppy = import ./poppy;
           }
         ];
       };
