@@ -8,6 +8,7 @@
     ./vscode.nix
     ./git.nix
     ./spotify.nix
+    ./games
   ];
 
   home.username = "poppy";
@@ -65,6 +66,7 @@
       alejandra
       nixd
       gh
+      jq
     ];
   };
 
