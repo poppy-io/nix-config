@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  lib,
   ...
 }: {
   imports = [
@@ -14,12 +13,6 @@
 
   programs = {
     home-manager.enable = true;
-
-    git = {
-      enable = true;
-      userName = "Poppy -";
-      userEmail = "me@poppyio.com";
-    };
 
     bash = {
       enable = true;
