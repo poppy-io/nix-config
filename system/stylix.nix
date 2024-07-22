@@ -40,9 +40,9 @@
       };
     };
 
-    cursor = {
-      package = pkgs.hackneyed;
-      name = "Hackneyed Dark";
-    };
+    #cursor = {
+    #  package = pkgs.hackneyed;
+    #  name = "Hackneyed Dark";
+    #};
   };
 }
