@@ -20,7 +20,7 @@
       desktop = 0.7;
       popups = 0.6;
       terminal = 0.7;
-    }
+    };
 
     fonts = {
       serif = {
