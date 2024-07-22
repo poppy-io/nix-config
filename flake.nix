@@ -25,10 +25,6 @@
     aagl,
     ...
   } @ inputs: {
-    imports = [
-      ./system/system.nix
-    ];
-
     nixosConfigurations = {
       poppy-nix = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
