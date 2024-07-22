@@ -11,11 +11,5 @@ in
         inherit customIcon;
       };
     });   
-  }
-
-  home.packages = with pkgs; [
-    (aliasToPackage {
-        zzz = "${config.programs.sleepy-launcher.package}/bin/sleepy-launcher --run-game";
-    })
-  ];
+  };
 }
