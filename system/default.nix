@@ -11,6 +11,8 @@
   ];
 
   security.polkit.enable = true;
+  
+  system.autoUpgrade.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/London";

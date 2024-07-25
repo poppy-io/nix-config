@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./sway/sway.nix
+    ./sway
     ./git.nix
     ./spotify.nix
   ];

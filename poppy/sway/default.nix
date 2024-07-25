@@ -1,9 +1,4 @@
-{
-  pkgs,
-  config,
-  lib,
-  ...
-}: {
+{pkgs}: {
   imports = [
     ./keybinds.nix
     ./outputs.nix
@@ -15,7 +10,7 @@
     enable = true;
     systemd.enable = true;
 
-    config = rec {
+    config = {
       modifier = "Mod4";
       terminal = "kitty";
       startup = [{command = "vesktop";}];
