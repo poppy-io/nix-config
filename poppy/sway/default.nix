@@ -1,4 +1,4 @@
-{pkgs}: {
+{pkgs, ...}: {
   imports = [
     ./keybinds.nix
     ./outputs.nix

@@ -33,4 +33,20 @@
       nrb = "sudo nixos-rebuild switch";
     };
   };
+
+  programs.carapace = {
+    enable = true;
+    enableNushellIntegration = true;
+  };
+
+  programs.starship = {
+    enable = true;
+    settings = {
+      add_newline = true;
+      character = {
+        success_symbol = "[:3](bold green)";
+        error_symbol = "[:3](bold red)";
+      };
+    };
+  };
 }
