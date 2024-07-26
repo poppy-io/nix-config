@@ -10,6 +10,7 @@
     ./kitty.nix
     ./spotify.nix
     ./stylix.nix
+    ./nushell.nix
   ];
 
   home.username = "poppy";
