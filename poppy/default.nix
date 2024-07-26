@@ -11,6 +11,7 @@
     ./spotify.nix
     ./stylix.nix
     ./nushell.nix
+    ./firefox.nix
   ];
 
   home.username = "poppy";
