@@ -7,11 +7,12 @@
     ./stylix.nix
     ./vscode.nix
     ./greetd.nix
+    ./nushell.nix
     ./games
   ];
 
   security.polkit.enable = true;
-  
+
   system.autoUpgrade.enable = true;
 
   # Set your time zone.
