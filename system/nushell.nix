@@ -1,4 +1,4 @@
 {pkgs, ...}: {
-  programs.nushell.enable = true;
+  environment.systemPackages = [pkgs.nushell];
   users.defaultUserShell = pkgs.nushell;
 }
