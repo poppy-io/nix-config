@@ -7,6 +7,9 @@
     ./sway
     ./git.nix
     ./spotify.nix
+    ./kitty.nix
+    ./spotify.nix
+    ./stylix.nix
   ];
 
   home.username = "poppy";
