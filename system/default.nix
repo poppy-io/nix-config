@@ -8,6 +8,7 @@
     ./vscode.nix
     ./greetd.nix
     ./nushell.nix
+    ./bluetooth.nix
     ./games
   ];
 
