@@ -62,7 +62,6 @@
       xdelta
       p7zip
       adwaita-icon-theme # for lutris
-      ungoogled-chromium
       xivlauncher
       sway-contrib.grimshot # screenshot tool
       #wayrecord  # screenrecord tool
