@@ -5,7 +5,7 @@
       pos = "1920 0";
     };
     DP-3 = {
-      disable = "true";
+      disable = "";
     };
     HDMI-A-1 = {
       pos = "0 0";
