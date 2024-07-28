@@ -13,7 +13,7 @@
       sha256 = "4ehXDzIBPCkqO5u0zNNaWsgvM0gR9qZP8SbKYAjdOas=";
     };
     polarity = "light";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/da-one-paper.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/danqing.yaml";
 
     opacity = {
       applications = 0.7;
