@@ -12,6 +12,13 @@
     ./games
   ];
 
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 32 * 1024; # 32GB
+    }
+  ];
+
   security.polkit.enable = true;
 
   system.autoUpgrade.enable = true;
