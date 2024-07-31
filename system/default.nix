@@ -9,6 +9,7 @@
     ./greetd.nix
     ./nushell.nix
     ./bluetooth.nix
+    ./android.nix
     ./games
   ];
 
