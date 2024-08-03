@@ -4,7 +4,6 @@
       cores = with libretro; [
         beetle-saturn
         flycast
-        yabuase
       ];
     })
   ];
