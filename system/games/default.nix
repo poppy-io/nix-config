@@ -4,5 +4,6 @@
     ./hk3
     ./zzz
     ./hsr
+    ./retroarch.nix
   ];
 }
