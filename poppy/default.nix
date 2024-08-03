@@ -54,11 +54,7 @@
       winetricks
       unrar
       lutris
-      (retroarch.override {
-        cores = with libretro; [
-          beetle-saturn
-        ];
-      })
+
       xdelta
       p7zip
       adwaita-icon-theme # for lutris
