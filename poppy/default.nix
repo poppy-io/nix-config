@@ -12,6 +12,7 @@
     ./stylix.nix
     ./nushell.nix
     ./firefox.nix
+    ./floorp.nix
   ];
 
   home.username = "poppy";
