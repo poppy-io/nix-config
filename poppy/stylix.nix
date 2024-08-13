@@ -4,5 +4,7 @@
       enable = true;
       variant256Colors = true;
     };
+
+    yazi.enable = true;
   };
 }
