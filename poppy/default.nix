@@ -55,6 +55,7 @@
       winetricks
       unrar
       lutris
+      ryujinx
 
       xdelta
       p7zip
