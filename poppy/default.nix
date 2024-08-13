@@ -56,7 +56,6 @@
       winetricks
       unrar
       lutris
-      ryujinx
       nautilus # GNOME file manager
 
       xdelta
