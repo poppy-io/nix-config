@@ -57,6 +57,7 @@
     wget
     swayfx
     transmission_4-gtk
+    ryujinx
   ];
 
   # List services that you want to enable:
