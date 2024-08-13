@@ -13,6 +13,7 @@
     ./nushell.nix
     ./firefox.nix
     ./floorp.nix
+    ./yazi.nix
   ];
 
   home.username = "poppy";
