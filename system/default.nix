@@ -39,7 +39,7 @@
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gtk
   ];
-  xdg.portal.config.common.default = "wlr";
+  xdg.portal.config.common.default = "gtk";
 
   # Enable sound.
   hardware.pulseaudio.enable = true;
