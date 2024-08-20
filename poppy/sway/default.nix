@@ -18,9 +18,6 @@
     };
   };
 
-  # required for fcitx5
-  services.xserver.desktopManager.runXdgAutostartIfNone = true;
-
   # notification system for sway
   services.mako = {
     enable = true;
