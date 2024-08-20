@@ -10,8 +10,7 @@
     defaultLocale = "en_GB.UTF-8/UTF-8";
 
     inputMethod = {
-      type = "fcitx5";
-      enable = true;
+      enabled = "fcitx5";
       fcitx5 = {
         waylandFrontend = true;
         addons = with pkgs; [
