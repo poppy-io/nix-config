@@ -7,8 +7,9 @@
   ];
 
   i18n = {
-    defaultLocale = "en_GB.UTF-8";
-    inputMethod.enabled = "ibus";
+    defaultLocale = "en_GB.UTF-8/UTF-8";
+    inputMethod.enable = true;
+    inputMethod.type = "ibus";
   };
 
   environment.variables.GLFW_IM_MODULE = "ibus";
