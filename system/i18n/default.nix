@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   imports = [
     ./de.nix
     ./zh.nix
@@ -8,11 +8,10 @@
 
   i18n = {
     defaultLocale = "en_GB.UTF-8";
-    inputMethod.enabled = "fcitx5";
-    fcitx5.addons = with pkgs; [
-      fcitx5-gtk
-    ];
+    inputMethod.enabled = "ibus";
   };
+
+  environment.variables.GLFW_IM_MODULE = "ibus";
 
   # use equivalent BAC timezone due to lack of Scottish option
   time.timeZone = "Europe/Dublin";
