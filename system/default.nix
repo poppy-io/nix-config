@@ -10,7 +10,9 @@
     ./nushell.nix
     ./bluetooth.nix
     ./android.nix
+    ./tty.nix
     ./games
+    ./i18n
   ];
 
   swapDevices = [
@@ -24,24 +26,13 @@
 
   system.autoUpgrade.enable = true;
 
-  # Set your time zone.
-  time.timeZone = "Europe/London";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_GB.UTF-8";
-  console = {
-    font = "Lat2-Terminus16";
-    # keyMap = "uk";
-    useXkbConfig = true; # use xkb.options in tty.
-  };
-
   xdg.portal.enable = true;
   xdg.portal.xdgOpenUsePortal = true;
   xdg.portal.extraPortals = with pkgs; [
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gtk
   ];
-  xdg.portal.config.common.default = "gtk";
+  xdg.portal.config.common.default = "wlr";
 
   # Enable sound.
   hardware.pulseaudio.enable = true;
