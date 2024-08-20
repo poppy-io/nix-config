@@ -57,4 +57,7 @@
   # List services that you want to enable:
   # services.flatpak.enable = true;
   services.gnome.gnome-keyring.enable = true;
+
+  # required for fcitx5
+  services.xserver.desktopManager.runXdgAutostartIfNone = true;
 }
