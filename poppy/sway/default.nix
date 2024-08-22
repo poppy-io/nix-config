@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   imports = [
     ./keybinds.nix
     ./outputs.nix
@@ -39,13 +43,35 @@
     enable = true;
     bars = {
       top = {
-        icons = "material-nf";
-        theme = "ctp-frappe";
+        settings = {
+          theme = {
+            theme = "solarized-dark";
+            # TODO: manual stylix integration
+            #overrides = {
+            #  idle_bg = config.lib.stylix.colors.base00;
+            #  idle_fg =
+            #  good_bg =
+            #  good_fg =
+            #  warning_bg =
+            #  warning_fg =
+            #  critical_bg =
+            #  info_bg =
+            #  info_fg =
+            #  alternating_tint_bg =
+            #  alternating_tint_fg =
+            #  separator_bg =
+            #  separator_fg =
+            #  separator =
+            #  end_separator =
+            #};
+          };
+        };
+
         blocks = [
           {
             block = "time";
             interval = 60;
-            format = "%a %d/%m %k:%M %p";
+            format = " $timestamp.datetime(f:'%a %d/%m %R') ";
           }
           {
             block = "cpu";
