@@ -52,6 +52,7 @@
     swayfx
     transmission_4-gtk
     ryujinx
+    bottles
   ];
 
   # List services that you want to enable:
