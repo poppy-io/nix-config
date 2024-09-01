@@ -56,13 +56,13 @@
       winetricks
       unrar
       lutris
-      nautilus # GNOME file manager
 
       xdelta
       p7zip
-      adwaita-icon-theme # for lutris
       xivlauncher
       sway-contrib.grimshot # screenshot tool
+      vlc
+      quodlibet
       #wayrecord  # screenrecord tool
     ];
   };
