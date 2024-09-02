@@ -10,7 +10,7 @@
     ./kitty.nix
     ./spotify.nix
     ./stylix.nix
-    ./nushell.nix
+    ./nushell
     ./firefox.nix
     ./floorp.nix
     ./yazi.nix
@@ -64,6 +64,8 @@
       vlc
       quodlibet
       #wayrecord  # screenrecord tool
+
+      jdk8
     ];
   };
 

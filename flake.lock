@@ -2,11 +2,11 @@
   "nodes": {
     "NUR": {
       "locked": {
-        "lastModified": 1725200084,
-        "narHash": "sha256-FLMbOxxS2BCOnnysVEe8GXfz6qJM4tomY7kwk819hqw=",
+        "lastModified": 1725282210,
+        "narHash": "sha256-z+eGHYNm3C68fY5QCp1qZdAdzSvNsJuYJ5BiLh9JrGo=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "8053ff84b7fdd54441cc99b9195700409a5e69ec",
+        "rev": "4f3ba94e14d4215a3471284fd05df08c95e6669d",
         "type": "github"
       },
       "original": {
@@ -23,11 +23,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1725198045,
-        "narHash": "sha256-Dda9Pw0Dm5vqWBEvGjiMCthKmA7nPMe6lcDUAwV7NfM=",
+        "lastModified": 1725219935,
+        "narHash": "sha256-4NFYm2MvJ9DhSwv28Kag1J+G/aDrqmR4kzMlnVoJXIU=",
         "owner": "ezKEa",
         "repo": "aagl-gtk-on-nix",
-        "rev": "840a2ddd22b6773d47f4c125dadee13e9f25dc2b",
+        "rev": "a8342f880b1792830f56471fde6c38ccb60a568a",
         "type": "github"
       },
       "original": {
@@ -355,11 +355,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1725126812,
-        "narHash": "sha256-E0CrYq8A/gdBjb9qC3PGKfH9lwSESyFX6sRZXJxq4JE=",
+        "lastModified": 1725273590,
+        "narHash": "sha256-/GY7CIsOmNW4XGUjKI8sedd9Go6jFSmRMLjaUAtCYw0=",
         "owner": "danth",
         "repo": "stylix",
-        "rev": "3a4101c4f4abee41859c0cb98f6250f04c80d0f6",
+        "rev": "c95de3625235390b7a5160bddaae7243a89f811f",
         "type": "github"
       },
       "original": {
