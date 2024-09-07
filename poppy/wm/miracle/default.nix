@@ -1,6 +1,4 @@
 {...}: {
-  programs.wayland.miracle-wm.enable = true;
-
   xdg.configFile."miracle-wm.yaml".text = builtins.toJSON {
     action_key = "meta";
     terminal = "kitty";
