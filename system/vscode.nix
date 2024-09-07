@@ -25,6 +25,7 @@
         njpwerner.autodocstring
         mattn.lisp
         mathiasfrohlich.kotlin
+        redhat.vscode-yaml
       ];
     })
 

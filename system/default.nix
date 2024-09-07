@@ -24,8 +24,6 @@
 
   security.polkit.enable = true;
 
-  system.autoUpgrade.enable = true;
-
   xdg.portal.enable = true;
   xdg.portal.xdgOpenUsePortal = true;
   xdg.portal.extraPortals = with pkgs; [
@@ -34,14 +32,13 @@
   ];
   xdg.portal.config.common.default = "wlr";
 
-  # Enable sound.
-  hardware.pulseaudio.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.poppy = {
     isNormalUser = true;
     extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
   };
+
+  hardware.pulseaudio.enable = false;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

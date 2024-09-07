@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./sway
+    ./wm
     ./git.nix
     ./spotify.nix
     ./kitty.nix
