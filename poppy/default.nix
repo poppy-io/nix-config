@@ -13,6 +13,7 @@
     ./firefox.nix
     ./floorp.nix
     ./yazi.nix
+    ./i3status.nix
   ];
 
   home.username = "poppy";
