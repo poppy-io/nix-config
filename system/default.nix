@@ -52,6 +52,8 @@
     bottles
   ];
 
+  programs.wayland.miracle-wm.enable = true;
+
   # List services that you want to enable:
   # services.flatpak.enable = true;
   services.gnome.gnome-keyring.enable = true;
