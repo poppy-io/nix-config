@@ -6,7 +6,7 @@
   ];
 
   # tiling window manager. replaced with swayfx under the hood (probably)
-  wayland.windowManager.sway = {
+  programs.wayland.windowManager.sway = {
     enable = true;
     systemd.enable = true;
 
@@ -30,9 +30,7 @@
     enable = true;
   };
 
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     clipman
   ];
-
-  # information for swaybar
 }
