@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [
-    ./wm
     ./git.nix
     ./spotify.nix
     ./kitty.nix

@@ -13,6 +13,7 @@
     ./tty.nix
     ./games
     ./i18n
+    ./wm
   ];
 
   swapDevices = [
