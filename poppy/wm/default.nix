@@ -1,5 +1,6 @@
 {...}: {
   imports = [
     ./miracle
+    ./sway
   ];
 }

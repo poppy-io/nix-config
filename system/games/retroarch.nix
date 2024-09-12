@@ -4,6 +4,7 @@
       cores = with libretro; [
         beetle-saturn
         flycast
+        dolphin
       ];
     })
   ];

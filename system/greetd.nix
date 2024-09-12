@@ -3,7 +3,7 @@
     enable = true;
     settings = rec {
       initial_session = {
-        command = "${pkgs.miracle-wm}/bin/miracle-wm";
+        command = "${pkgs.sway}/bin/sway";
         user = "poppy";
       };
       default_session = initial_session;
