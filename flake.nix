@@ -8,6 +8,11 @@
     NUR.url = "github:nix-community/NUR";
     stylix.url = "github:danth/stylix";
 
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.0.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,6 +27,7 @@
   outputs = {
     self,
     nixpkgs,
+    lix-module,
     home-manager,
     aagl,
     ...
@@ -31,6 +37,8 @@
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
         modules = [
+          lix-module.nixosModules.default
+
           ./configuration.nix
           ./system
 
