@@ -4,11 +4,11 @@
       vscode = vscodium;
       vscodeExtensions = with vscode-extensions; [
         jnoortheen.nix-ide
-        ms-python.python
-        ms-python.isort
-        ms-python.debugpy
-        ms-python.black-formatter
-        ms-pyright.pyright
+        #ms-python.python
+        #ms-python.isort
+        #ms-python.debugpy
+        #ms-python.black-formatter
+        #ms-pyright.pyright
         yzhang.markdown-all-in-one
         wakatime.vscode-wakatime
         vscode-icons-team.vscode-icons
