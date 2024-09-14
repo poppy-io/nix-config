@@ -5,6 +5,7 @@
         beetle-saturn
         flycast
         dolphin
+        swanstation
       ];
     })
   ];
