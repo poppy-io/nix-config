@@ -15,6 +15,7 @@
     ./floorp.nix
     ./yazi.nix
     ./i3status.nix
+    ./emacs
   ];
 
   home.username = "poppy";
@@ -50,6 +51,7 @@
 
     packages = with pkgs; [
       kitty
+      hyfetch
       wmenu
       vesktop
       clinfo

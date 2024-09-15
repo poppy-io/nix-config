@@ -22,16 +22,25 @@
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-doom-emacs-unstraightened = {
+      url = "github:marienz/nix-doom-emacs-unstraightened";
+      inputs.nixpkgs.follows = "";
+    };
+    emacs-overlay = {
+      url = "github:nix-community/emacs-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = {
+  outputs = inputs @ {
     self,
     nixpkgs,
     lix-module,
     home-manager,
     aagl,
     ...
-  } @ inputs: {
+  }: {
     nixosConfigurations = {
       poppy-nix = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -49,7 +58,14 @@
 
             home-manager.backupFileExtension = "backup";
 
-            home-manager.users.poppy = import ./poppy;
+            home-manager.users.poppy = {
+              modules = [
+                ./poppy
+                inputs.nix-doom-emacs-unstraightened
+              ];
+
+              extraSpecialArgs = {inherit inputs;};
+            };
           }
         ];
       };
