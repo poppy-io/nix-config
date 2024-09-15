@@ -15,7 +15,6 @@
     ./floorp.nix
     ./yazi.nix
     ./i3status.nix
-    ./emacs
   ];
 
   home.username = "poppy";
@@ -38,7 +37,7 @@
 
   home = {
     sessionVariables = {
-      EDITOR = "nano";
+      EDITOR = "emacs";
       TERMINAL = "kitty";
       GNUPGHOME = "${config.xdg.dataHome}/gnupg";
       XDG_CONFIG_HOME = config.xdg.configHome;
@@ -69,6 +68,7 @@
       #wayrecord  # screenrecord tool
 
       jdk8
+      onlyoffice-bin
     ];
   };
 
