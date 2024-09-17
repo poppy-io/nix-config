@@ -58,14 +58,9 @@
 
             home-manager.backupFileExtension = "backup";
 
-            home-manager.users.poppy = {
-              modules = [
-                ./poppy
-                inputs.nix-doom-emacs-unstraightened
-              ];
+            home-manager.users.poppy = import ./poppy;
 
-              extraSpecialArgs = {inherit inputs;};
-            };
+            home-manager.extraSpecialArgs = {inherit inputs;};
           }
         ];
       };
