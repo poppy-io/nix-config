@@ -1,6 +1,10 @@
-{config, ...}: {
+{config, ...}: let
+  usrmodules = ./. + "../../../modules/user";
+in {
   home.username = "poppy";
   home.homeDirectory = "/home/poppy";
+
+  # imports = map (x: "${usrmodules}" + x) [];
 
   programs = {
     home-manager.enable = true;

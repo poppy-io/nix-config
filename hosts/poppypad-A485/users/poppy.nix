@@ -29,19 +29,10 @@ in {
       winetricks
       unrar
       lutris
-
-      xdelta
       p7zip
-      xivlauncher
-      sway-contrib.grimshot # screenshot tool
       vlc
       quodlibet
-      #wayrecord  # screenrecord tool
-
-      jdk8
       onlyoffice-bin
     ];
   };
-
-  home.stateVersion = "24.05";
 }

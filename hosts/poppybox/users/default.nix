@@ -1,3 +1,0 @@
-{...}: {
-  poppy = import ./poppy.nix;
-}
