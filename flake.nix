@@ -48,6 +48,52 @@
     # should move this to a package by package override at some point
     nixpkgs.config.allowUnfree = true;
 
-    nixosConfigurations = import ./hosts;
+    nixosConfigurations = {
+      "poppybox" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        modules = [
+          lix-module.nixosModules.default
+
+          ./hosts/common
+          ./hosts/poppybox
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+
+            home-manager.extraSpecialArgs = {inherit inputs;};
+            home-manager.users = import ./hosts/poppybox/users;
+          }
+        ];
+
+        specialArgs = {inherit inputs;};
+      };
+
+      "poppypad-A485" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        modules = [
+          lix-module.nixosModules.default
+
+          ./hosts/common
+          ./hosts/poppypad-A485
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+
+            home-manager.extraSpecialArgs = {inherit inputs;};
+            home-manager.users = import ./hosts/poppypad-A485/users;
+          }
+        ];
+
+        specialArgs = {inherit inputs;};
+      };
+    };
   };
 }
