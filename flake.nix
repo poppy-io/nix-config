@@ -45,15 +45,18 @@
       experimental-features = ["nix-command" "flakes"];
     };
 
-    # should move this to a package by package override at some point
-    nixpkgs.config.allowUnfree = true;
-
     nixosConfigurations = {
       "poppybox" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         modules = [
           lix-module.nixosModules.default
+          inputs.aagl.nixosModules.default
+
+          {
+            # should move this to a package by package override at some point
+            nixpkgs.config.allowUnfree = true;
+          }
 
           ./hosts/common
           ./hosts/poppybox
@@ -65,7 +68,7 @@
             home-manager.backupFileExtension = "backup";
 
             home-manager.extraSpecialArgs = {inherit inputs;};
-            home-manager.users = import ./hosts/poppybox/users;
+            home-manager.users.poppy = import ./hosts/poppybox/users/poppy.nix;
           }
         ];
 
@@ -78,6 +81,11 @@
         modules = [
           lix-module.nixosModules.default
 
+          {
+            # should move this to a package by package override at some point
+            nixpkgs.config.allowUnfree = true;
+          }
+
           ./hosts/common
           ./hosts/poppypad-A485
 
@@ -88,7 +96,7 @@
             home-manager.backupFileExtension = "backup";
 
             home-manager.extraSpecialArgs = {inherit inputs;};
-            home-manager.users = import ./hosts/poppypad-A485/users;
+            home-manager.users = import ./hosts/poppypad-A485/users/poppy.nix;
           }
         ];
 

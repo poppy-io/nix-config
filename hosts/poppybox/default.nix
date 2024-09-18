@@ -1,5 +1,5 @@
 {...}: let
-  sysmodules = ./. + "../../modules/system";
+  sysmodules = ./. + "/../../modules/system";
 in {
   networking.hostName = "poppybox";
 
