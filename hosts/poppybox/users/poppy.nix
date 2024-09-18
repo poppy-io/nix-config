@@ -1,21 +1,17 @@
-{
-  self,
-  pkgs,
-  ...
-}: let
-  modules = "${self}/modules";
+{pkgs, ...}: let
+  usrmodules = ./. + "../../../modules/user";
 in {
-  imports = map (x: "${modules}" + x) [
-    /wm
-    /git.nix
-    /spotify.nix
-    /kitty.nix
-    /stylix.nix
-    /nushell
-    /firefox.nix
-    /floorp.nix
-    /yazi.nix
-    /i3status.nix
+  imports = map (x: "${usrmodules}" + x) [
+    "/wm"
+    "/git.nix"
+    "/spotify.nix"
+    "/kitty.nix"
+    "/stylix.nix"
+    "/nushell"
+    "/firefox.nix"
+    "/floorp.nix"
+    "/yazi.nix"
+    "/i3status.nix"
   ];
 
   home = {
