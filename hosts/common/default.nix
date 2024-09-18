@@ -1,25 +1,21 @@
-{
-  pkgs,
-  self,
-  ...
-}: let
-  sysmodules = "${self}/modules/system";
+{pkgs, ...}: let
+  sysmodules = ./. + "/../../modules/system";
 in {
   imports = map (x: "${sysmodules}" + x) [
-    /boot.nix
-    /greetd.nix
+    "/boot.nix"
+    "/greetd.nix"
 
-    /nushell.nix
-    /tty.nix
-    /vscode.nix
+    "/nushell.nix"
+    "/tty.nix"
+    "/vscode.nix"
 
-    /bluetooth.nix
-    /networking.nix
-    /audio.nix
+    "/bluetooth.nix"
+    "/networking.nix"
+    "/audio.nix"
 
-    /fonts.nix
-    /i18n
-    /stylix.nix
+    "/fonts.nix"
+    "/i18n"
+    "/stylix.nix"
   ];
 
   environment.systemPackages = with pkgs; [

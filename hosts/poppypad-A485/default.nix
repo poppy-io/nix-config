@@ -1,5 +1,5 @@
 {self, ...}: let
-  sysmodules = "${self}/modules/system";
+  sysmodules = ./. + "../../modules/system";
 in {
   networking.hostName = "poppypad-A485";
 
