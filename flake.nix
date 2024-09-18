@@ -41,29 +41,13 @@
     aagl,
     ...
   }: {
-    nixosConfigurations = {
-      poppy-nix = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {inherit inputs;};
-        modules = [
-          lix-module.nixosModules.default
-
-          ./configuration.nix
-          ./system
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.backupFileExtension = "backup";
-
-            home-manager.users.poppy = import ./poppy;
-
-            home-manager.extraSpecialArgs = {inherit inputs;};
-          }
-        ];
-      };
+    nix.settings = {
+      experimental-features = ["nix-command" "flakes"];
     };
+
+    # should move this to a package by package override at some point
+    nixpkgs.config.allowUnfree = true;
+
+    nixosConfigurations = import ./hosts;
   };
 }
