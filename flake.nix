@@ -41,10 +41,6 @@
     aagl,
     ...
   }: {
-    nix.settings = {
-      experimental-features = ["nix-command" "flakes"];
-    };
-
     nixosConfigurations = {
       "poppybox" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -56,6 +52,10 @@
           {
             # should move this to a package by package override at some point
             nixpkgs.config.allowUnfree = true;
+
+            nix.settings = {
+              experimental-features = ["nix-command" "flakes"];
+            };
           }
 
           ./hosts/common
@@ -82,8 +82,11 @@
           lix-module.nixosModules.default
 
           {
-            # should move this to a package by package override at some point
             nixpkgs.config.allowUnfree = true;
+
+            nix.settings = {
+              experimental-features = ["nix-command" "flakes"];
+            };
           }
 
           ./hosts/common
