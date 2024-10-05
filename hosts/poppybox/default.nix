@@ -14,6 +14,7 @@ in {
       "/android.nix"
       "/torrent.nix"
       "/bottles.nix"
+      "/vpn.nix"
 
       "/games/hk3"
       "/games/zzz"
