@@ -35,5 +35,6 @@
   home.packages = with pkgs; [
     clipman
     swayfx
+    wdisplays # GUI display manager for wlroots
   ];
 }

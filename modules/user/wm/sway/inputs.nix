@@ -1,7 +1,7 @@
 {...}: {
   wayland.windowManager.sway.config.input = {
     "*" = {
-      xkb_layout = "jp";
+      xkb_layout = "gb";
     };
   };
 }
