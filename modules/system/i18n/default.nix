@@ -12,6 +12,8 @@
       "en_GB.UTF-8/UTF-8"
     ];
 
+    defaultLocale = "en_GB.UTF-8";
+
     inputMethod = {
       enabled = "fcitx5";
       fcitx5 = {
