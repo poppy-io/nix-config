@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  usrmodules = ./. + "/../../../modules/user";
+  usrmodules = ./. + "/../../../../modules/user";
 in {
   imports =
     map (x: "${usrmodules}" + x) [
@@ -15,7 +15,8 @@ in {
       "/i3status.nix"
     ]
     ++ [
-      ../../common/users/poppy.nix
+      ../../../common/users/poppy.nix
+      ./modules
     ];
 
   home = {

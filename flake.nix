@@ -68,7 +68,7 @@
             home-manager.backupFileExtension = "backup";
 
             home-manager.extraSpecialArgs = {inherit inputs;};
-            home-manager.users.poppy = import ./hosts/poppybox/users/poppy.nix;
+            home-manager.users.poppy = import ./hosts/poppybox/users/poppy;
           }
         ];
 
@@ -99,7 +99,7 @@
             home-manager.backupFileExtension = "backup";
 
             home-manager.extraSpecialArgs = {inherit inputs;};
-            home-manager.users = import ./hosts/poppypad-A485/users/poppy.nix;
+            home-manager.users = import ./hosts/poppypad-A485/users/poppy;
           }
         ];
 
