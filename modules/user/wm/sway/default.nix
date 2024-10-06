@@ -1,8 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ./keybinds.nix
-    ./outputs.nix
-    ./inputs.nix
   ];
 
   # tiling window manager. replaced with swayfx under the hood (probably)
