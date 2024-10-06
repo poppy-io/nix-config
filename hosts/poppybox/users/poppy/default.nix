@@ -13,6 +13,7 @@ in {
       "/floorp.nix"
       "/yazi.nix"
       "/i3status.nix"
+      "/discord.nix"
     ]
     ++ [
       ../../../common/users/poppy.nix
@@ -24,7 +25,6 @@ in {
       kitty
       hyfetch
       wmenu
-      vesktop
       clinfo
       wineWowPackages.waylandFull
       winetricks
