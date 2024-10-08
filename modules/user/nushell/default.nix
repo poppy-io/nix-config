@@ -29,7 +29,14 @@
       )
 
       $env.config.hooks.env_change.PWD = (
-        $env.config.hooks.env_change.PWD | append (source nu-hooks/nu-hooks/direnv/config.nu)
+        $env.config.hooks.env_change.PWD |
+        append { ||
+          if (which direnv | is-empty) {
+            return
+          }
+
+        direnv export json | from json | default {} | load-env
+        }
       )
     '';
 
