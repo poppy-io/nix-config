@@ -1,4 +1,4 @@
-{...}: {
+{
   stylix.targets = {
     kitty = {
       enable = true;

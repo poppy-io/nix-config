@@ -1,4 +1,4 @@
-{...}: {
+{
   # will require this line in syspkgs to function
   # programs.wayland.miracle-wm.enable = true;
 
