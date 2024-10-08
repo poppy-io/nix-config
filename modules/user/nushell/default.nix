@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   programs.nushell = {
     enable = true;
 
@@ -61,4 +61,8 @@
     nix-direnv.enable = true;
     enableNushellIntegration = true;
   };
+
+  home.packages = with pkgs; [
+    nu_scripts
+  ];
 }
