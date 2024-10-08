@@ -23,7 +23,7 @@ in {
 
   home = {
     sessionVariables = {
-      EDITOR = "emacs";
+      EDITOR = "nano";
       TERMINAL = "kitty";
       GNUPGHOME = "${config.xdg.dataHome}/gnupg";
       XDG_CONFIG_HOME = config.xdg.configHome;
