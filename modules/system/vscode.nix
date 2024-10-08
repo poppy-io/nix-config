@@ -26,6 +26,7 @@
         mattn.lisp
         mathiasfrohlich.kotlin
         redhat.vscode-yaml
+        thenuprojectcontributors.vscode-nushell-lang
       ];
     })
 
