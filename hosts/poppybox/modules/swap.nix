@@ -1,4 +1,4 @@
-{...}: {
+{
   swapDevices = [
     {
       device = "/swapfile";

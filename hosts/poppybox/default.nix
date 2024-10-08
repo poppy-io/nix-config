@@ -1,4 +1,4 @@
-{...}: let
+let
   sysmodules = ./. + "/../../modules/system";
 in {
   networking.hostName = "poppybox";

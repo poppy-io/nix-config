@@ -1,4 +1,4 @@
-{...}: {
+{
   wayland.windowManager.sway.config.output = {
     DP-1 = {
       # primary monitor
