@@ -27,6 +27,10 @@
       prepend /home/poppy/.apps |
       append /usr/bin/env
       )
+
+      $env.config.hooks.env_change.PWD = (
+        $env.config.hooks.env_change.PWD | append (source nu-hooks/nu-hooks/direnv/config.nu)
+      )
     '';
 
     shellAliases = {
@@ -50,5 +54,11 @@
         error_symbol = "[:3](bold red)";
       };
     };
+  };
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+    enableNushellIntegration = true;
   };
 }
