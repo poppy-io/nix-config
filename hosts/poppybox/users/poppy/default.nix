@@ -3,26 +3,26 @@
 in {
   imports =
     map (x: "${usrmodules}" + x) [
+      "/shell"
       "/wm"
+      "/editor"
+      "/browser"
+      "/terminal"
+
       "/git.nix"
       "/spotify.nix"
-      "/kitty.nix"
       "/stylix.nix"
-      "/nushell"
-      "/firefox.nix"
-      "/floorp.nix"
       "/yazi.nix"
       "/i3status.nix"
       "/discord.nix"
     ]
     ++ [
-      ../../../common/users/poppy.nix
+      ../../../defaults/users/poppy.nix
       ./modules
     ];
 
   home = {
     packages = with pkgs; [
-      kitty
       hyfetch
       wmenu
       clinfo

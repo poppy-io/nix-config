@@ -1,30 +1,23 @@
-{config, ...}: let
+{
+  config,
+  pkgs,
+  ...
+}: let
   usrmodules = ./. + "../../../modules/user";
 in {
   home.username = "poppy";
   home.homeDirectory = "/home/poppy";
 
+  users.defaultUserShell = pkgs.nushell;
+
   # imports = map (x: "${usrmodules}" + x) [];
 
   programs = {
     home-manager.enable = true;
-
-    bash = {
-      enable = true;
-      enableCompletion = true;
-
-      shellAliases = {
-        doas = "sudo";
-        please = "sudo";
-        nrb = "sudo nixos-rebuild switch";
-      };
-    };
   };
 
   home = {
     sessionVariables = {
-      EDITOR = "nano";
-      TERMINAL = "kitty";
       GNUPGHOME = "${config.xdg.dataHome}/gnupg";
       XDG_CONFIG_HOME = config.xdg.configHome;
       XDG_CACHE_HOME = config.xdg.cacheHome;
