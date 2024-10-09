@@ -6,7 +6,6 @@ in {
     "/greetd.nix"
 
     "/tty.nix"
-    "/vscode.nix"
 
     "/bluetooth.nix"
     "/networking.nix"

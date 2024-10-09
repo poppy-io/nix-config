@@ -10,7 +10,7 @@ in {
 
   users.defaultUserShell = pkgs.nushell;
 
-  # imports = map (x: "${usrmodules}" + x) [];
+  imports = map (x: "${usrmodules}" + x) [];
 
   programs = {
     home-manager.enable = true;
