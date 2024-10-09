@@ -35,4 +35,6 @@
     gh # github cli
     jq # json
   ];
+
+  home.sessionVariables.NIXOS_OZONE_WL = "1"; # required by VSCode under wayland
 }
