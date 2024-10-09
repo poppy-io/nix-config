@@ -20,6 +20,7 @@ in {
     git
     curl
     wget
+    ripgrep
   ];
 
   users.defaultUserShell = pkgs.nushell;

@@ -10,19 +10,12 @@ in {
       ./modules
     ]
     ++ map (x: "${sysmodules}" + x) [
-      "/steam.nix"
       "/android.nix"
       "/torrent.nix"
       "/bottles.nix"
       "/vpn.nix"
 
-      "/games/hk3"
-      "/games/zzz"
-      "/games/hsr"
-      "/games/agl"
-
-      "/games/retroarch.nix"
-      "/games/ryujinx.nix"
+      "/games"
     ];
 
   # This option defines the first version of NixOS you have installed on this particular machine,
