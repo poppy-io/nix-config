@@ -5,7 +5,6 @@ in {
     "/boot.nix"
     "/greetd.nix"
 
-    "/nushell.nix"
     "/tty.nix"
     "/vscode.nix"
 
