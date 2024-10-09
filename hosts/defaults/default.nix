@@ -22,6 +22,8 @@ in {
     wget
   ];
 
+  users.defaultUserShell = pkgs.nushell;
+
   users.users.poppy = {
     isNormalUser = true;
     extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.

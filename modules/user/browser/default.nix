@@ -1,7 +1,7 @@
 {
   imports = [./floorp.nix];
 
-  xdg.mime.defaultApplications = let
+  xdg.mimeApps.defaultApplications = let
     default_browser = "floorp.desktop";
   in {
     "text/html" = default_browser;
