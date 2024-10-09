@@ -53,7 +53,7 @@
             };
           }
 
-          ./hosts/common
+          ./hosts/defaults
           ./hosts/poppybox
 
           home-manager.nixosModules.home-manager
@@ -84,7 +84,7 @@
             };
           }
 
-          ./hosts/common
+          ./hosts/defaults
           ./hosts/poppypad-A485
 
           home-manager.nixosModules.home-manager
