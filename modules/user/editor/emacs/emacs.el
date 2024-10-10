@@ -1,25 +1,18 @@
 ;;;; the legendary poppy io emacs.el
 ;; started Wednesday October 9th 2024
 
-(require 'package)
 (package-initialize)
 
 ;; get rid of ugly default clutter so we can replace it with cute customized clutter
-(setq inhibit-startup-message t)
+(setq inhibit-startup-screen t)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (tooltip-mode -1)
 (menu-bar-mode -1)
-(set-fringe-mode 10)
 
-;; make emacs stop yelling at me
-(setq visible-bell t)
-
-;; ensure use-package is present. From here on out, all packages are loaded
-;; with use-package, a macro for importing and installing packages. Also, refresh the package archive on load so we can pull the latest packages.
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
+(set-fringe-mode 10) ; add a little breathing room
+(setq visible-bell t) ; make emacs stop yelling at me
+(eldoc-mode 1)
 
 (require 'use-package)
 (setq
@@ -31,7 +24,7 @@
   :config
   (exec-path-from-shell-initialize))
 
-;; set a cute theme
+;; set a cute theme for now until emacs overlay works with stylix
 (use-package doom-themes
   :init
   (load-theme 'doom-fairy-floss))
@@ -49,25 +42,16 @@
      (counsel-mode 1)
      :bind (:map ivy-minibuffer-map))
 
-;; manage projects and common project functionality
-
-
 ;; autocomplete suggestions
 (use-package company
-  :bind (("C-." . company-complete))
-  :custom
-  (company-idle-delay 0)
-  (company-dabbrev-downcase nil "Don't downcase returned candidates")
-  (company-show-numbers t "Numbers are helpful.")
-  (company-tooltip-limit 10 "The more the merrier.")
+  :ensure t
+  :init
+  (add-hook 'after-init-hook 'global-company-mode)
   :config
-  (global-company-mode) ;; Completion EVERYWHERE!
-
-  ;; use numbers 0-9 to select company completion candidates
-  (let ((map company-active-map))
-    (mapc (lambda (x) (define-key map (format "%d" x)
-				  `(lambda () (interactive) (company-complete-number ,x))))
-	  (number-sequence 0 9))))
+  (setq company-dabbrev-downcase 0)
+  (setq company-idle-delay 0.1)
+  (setq company-minimum-prefix-length 1)
+  (setq company-tooltip-align-annotations t))
 
 ;; flycheck replaces flymake and stops lsp-mode from doing too much
 (use-package flycheck
