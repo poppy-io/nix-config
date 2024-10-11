@@ -7,11 +7,14 @@
     };
     DP-2 = {
       # secondary monitor
+      mode = "1920x1080@60.000Hz";
       pos = "0 0";
     };
     HDMI-A-1 = {
       # TV
       disable = "";
+      mode = "3840x2160@60.000Hz";
+      pos = "3840 2160";
     };
   };
 }
