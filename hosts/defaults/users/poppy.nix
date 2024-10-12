@@ -4,7 +4,9 @@ in {
   home.username = "poppy";
   home.homeDirectory = "/home/poppy";
 
-  imports = map (x: "${usrmodules}" + x) [];
+  imports = map (x: "${usrmodules}" + x) [
+    "cursor.nix"
+  ];
 
   programs = {
     home-manager.enable = true;
