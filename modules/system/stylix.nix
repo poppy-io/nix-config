@@ -47,10 +47,5 @@
         name = "Noto Color Emoji";
       };
     };
-
-    cursor = {
-      package = pkgs.hackneyed;
-      name = "Hackneyed Dark";
-    };
   };
 }
