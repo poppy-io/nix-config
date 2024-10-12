@@ -1,6 +1,11 @@
 ;;;; the legendary poppy io emacs.el
 ;; started Wednesday October 9th 2024
 
+(require 'package)
+(package-initialize)
+(eval-when-compile
+  (require 'use-package))
+
 ;; get rid of ugly default clutter so we can replace it with cute customized clutter
 (setq inhibit-startup-screen t)
 (scroll-bar-mode -1)
@@ -48,6 +53,10 @@
   (setq company-idle-delay 0)
   (setq company-minimum-prefix-length 1)
   (setq company-tooltip-align-annotations t)
+  :bind
+  (:map company-active-map
+	("C-n". company-select-next)
+	("C-p". company-select-previous))
   (:map company-mode-map
 	("<tab>". tab-indent-or-complete)
 	("TAB". tab-indent-or-complete)))
