@@ -121,8 +121,8 @@
   (lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names nil)
   (lsp-rust-analyzer-display-closure-return-type-hints t)
   (lsp-rust-analyzer-display-parameter-hints nil)
-  (lsp-rust-analyzer-display-reborrow-hints nil)
-  
+  (lsp-rust-analyzer-display-reborrow-hints nil))
+
   :config
   (setq lsp-prefer-flymake nil) ; flymake is outdated, we use flycheck
   (add-hook 'lsp-mode-hook 'lsp-ui-mode))
