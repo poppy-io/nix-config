@@ -1,0 +1,7 @@
+# Emacs
+*~
+\#*\#
+
+# Direnv
+.direnv/
+.envrc

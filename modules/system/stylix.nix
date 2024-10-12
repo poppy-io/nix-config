@@ -9,10 +9,10 @@
     enable = true;
 
     image = pkgs.fetchurl {
-      url = "https://64.media.tumblr.com/6311cba4718459408cba35d6e676a80e/tumblr_n2oztnaz4W1suezzpo1_500.jpg";
-      sha256 = "0i6hv60sj0lg42kcm6b02kvih011ibk34mxsxyyigjh6143lbhr3";
+      url = "https://www.jame-world.com/media/image/2004-00/1643.jpg";
+      sha256 = "Mh6P/DWg9AozNyPm/RzpBCc30uHf7FIW8pDc8D2Q/oM=";
     };
-    polarity = "light";
+    polarity = "dark";
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/danqing.yaml";
 
     opacity = {
