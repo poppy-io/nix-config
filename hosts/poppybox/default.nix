@@ -14,8 +14,8 @@ in {
       "/torrent.nix"
       "/bottles.nix"
       "/vpn.nix"
-      "/emacs.nix"
 
+      "/emacs"
       "/games"
     ];
 
