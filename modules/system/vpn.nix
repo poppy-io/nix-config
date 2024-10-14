@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  environment.systemPackages = [pkgs.openfortivpn];
+  environment.systemPackages = with pkgs; [openfortivpn protonvpn-cli_2];
 }
