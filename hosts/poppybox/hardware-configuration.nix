@@ -27,6 +27,16 @@
     options = ["fmask=0022" "dmask=0022"];
   };
 
+  fileSystems."/mnt/win" = {
+    device = "/dev/sda2";
+    fsType = "ntfs";
+  };
+
+  fileSystems."/mnt/win/boot" = {
+    device = "/dev/sda1";
+    fsType = "vfat";
+  };
+
   swapDevices = [];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

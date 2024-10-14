@@ -1,7 +1,6 @@
 {
   boot = {
     loader = {
-      systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
 
@@ -20,9 +19,16 @@
       "rd.udev.log_level=3"
       "udev.log_priority=3"
     ];
+
+    grub = {
+      enable = true;
+      efiSupport = true;
+      useOSProber = true;
+    };
+
     # Hide the OS choice for bootloaders.
     # It's still possible to open the bootloader list by pressing any key
     # It will just not appear on screen unless a key is pressed
-    loader.timeout = 0;
+    #loader.timeout = 0;
   };
 }
