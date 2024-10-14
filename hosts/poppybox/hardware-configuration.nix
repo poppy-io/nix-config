@@ -32,10 +32,10 @@
     fsType = "ntfs";
   };
 
-  fileSystems."/mnt/win/boot" = {
-    device = "/dev/sda1";
-    fsType = "vfat";
-  };
+  #fileSystems."/mnt/winboot" = {
+  #  device = "/dev/sda1";
+  #  fsType = "vfat";
+  #};
 
   swapDevices = [];
 
