@@ -26,6 +26,11 @@
       url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
@@ -34,6 +39,7 @@
     lix-module,
     home-manager,
     aagl,
+    lanzaboote,
     ...
   }: {
     nixosConfigurations = {
@@ -42,7 +48,8 @@
 
         modules = [
           lix-module.nixosModules.default
-          inputs.aagl.nixosModules.default
+          aagl.nixosModules.default
+          lanzaboote.nixosModules.lanzaboote
 
           {
             # should move this to a package by package override at some point
