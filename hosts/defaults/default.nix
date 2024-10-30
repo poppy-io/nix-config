@@ -30,6 +30,8 @@ in {
     extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
   };
 
+  home-manager.backupFileExtension = "backup";
+
   services.gnome.gnome-keyring.enable = true;
   security.polkit.enable = true;
 
