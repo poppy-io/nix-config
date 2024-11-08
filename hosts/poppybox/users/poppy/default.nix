@@ -15,6 +15,7 @@ in {
       "/yazi.nix"
       "/i3status.nix"
       "/discord.nix"
+      "/xivlauncher.nix"
     ]
     ++ [
       ../../../defaults/users/poppy.nix
