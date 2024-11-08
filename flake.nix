@@ -56,6 +56,7 @@
           lix-module.nixosModules.default
           aagl.nixosModules.default
           lanzaboote.nixosModules.lanzaboote
+          inputs.spicetify-nix.nixosModules.default
 
           {
             # should move this to a package by package override at some point
@@ -89,6 +90,7 @@
 
         modules = [
           lix-module.nixosModules.default
+          spicetify-nix.nixosModules.default
 
           {
             nixpkgs.config.allowUnfree = true;
