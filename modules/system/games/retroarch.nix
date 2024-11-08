@@ -8,6 +8,5 @@
         swanstation
       ];
     })
-    xivlauncher
   ];
 }
