@@ -7,6 +7,6 @@
 
     yazi.enable = true;
 
-    spicetify.enable = true;
+    spicetify.enable = false;
   };
 }
