@@ -8,9 +8,9 @@ in {
       "/editor"
       "/browser"
       "/terminal"
+      "/music"
 
       "/git.nix"
-      "/spotify.nix"
       "/stylix.nix"
       "/yazi.nix"
       "/i3status.nix"
