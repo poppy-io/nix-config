@@ -37,7 +37,6 @@ in {
       xivlauncher
       sway-contrib.grimshot # screenshot tool
       vlc
-      quodlibet
       #wayrecord  # screenrecord tool
 
       jdk8

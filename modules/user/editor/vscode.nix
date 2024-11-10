@@ -27,6 +27,7 @@
         mathiasfrohlich.kotlin
         redhat.vscode-yaml
         thenuprojectcontributors.vscode-nushell-lang
+        a5huynh.vscode-ron
       ];
     })
 
