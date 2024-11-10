@@ -15,6 +15,7 @@ in {
       "/bottles.nix"
       "/vpn.nix"
       "/samba.nix"
+      "/mpd.nix"
 
       "/emacs"
       "/games"

@@ -10,8 +10,6 @@
     '';
 
     user = "poppy";
-
-    network.startWhenNeeded = true;
   };
 
   systemd.services.mpd.environment = {
