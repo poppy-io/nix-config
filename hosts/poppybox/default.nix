@@ -14,6 +14,7 @@ in {
       "/torrent.nix"
       "/bottles.nix"
       "/vpn.nix"
+      "/samba.nix"
 
       "/emacs"
       "/games"
