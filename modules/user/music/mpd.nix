@@ -1,5 +1,5 @@
 {
-  systemd.user.services.mpd = {
+  services.mpd = {
     enable = true;
     musicDirectory = "/mnt/share/music";
     extraConfig = ''
@@ -8,5 +8,7 @@
         name "pipewire"
       }
     '';
+
+    network.startWhenNeeded = true;
   };
 }
