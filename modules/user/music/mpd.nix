@@ -7,6 +7,11 @@
         type "pipewire"
         name "pipewire"
       }
+
+      playlist_plugin {
+        name "cue"
+        enabled "false"
+      }
     '';
 
     network.startWhenNeeded = true;
