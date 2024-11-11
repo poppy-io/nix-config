@@ -13,14 +13,14 @@
       sha256 = "Mh6P/DWg9AozNyPm/RzpBCc30uHf7FIW8pDc8D2Q/oM=";
     };
     polarity = "dark";
-    #base16Scheme = "${pkgs.base16-schemes}/share/themes/danqing.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/brushtrees.yaml";
 
-    opacity = {
-      applications = 0.7;
-      desktop = 0.7;
-      popups = 0.6;
-      terminal = 0.7;
-    };
+    #opacity = {
+    #  applications = 0.7;
+    #  desktop = 0.7;
+    #  popups = 0.6;
+    #  terminal = 0.7;
+    #};
 
     fonts = {
       serif = {
