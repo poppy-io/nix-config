@@ -3,5 +3,6 @@
     vesktop
   ];
 
-  services.arrpc.enable = true;
+  services.arrpc.enable = true; # rich presence server
+  services.mpd-discord-rpc.enable = true; # mpd rich presence integration
 }
