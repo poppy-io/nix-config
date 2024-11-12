@@ -1,3 +1,4 @@
 {pkgs, ...}: {
-  home.packages = [pkgs.nicotine-plus];
+  # use proprietary client cause nicotine crashes nonstop :(
+  home.packages = [pkgs.soulseekqt];
 }

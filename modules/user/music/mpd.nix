@@ -12,6 +12,8 @@
         name "cue"
         enabled "false"
       }
+
+      replaygain "auto"
     '';
 
     network.startWhenNeeded = true;

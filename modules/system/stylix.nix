@@ -5,6 +5,8 @@
 }: {
   imports = [inputs.stylix.nixosModules.stylix];
 
+  environment.systemPackages = [pkgs.adwaita-icon-theme];
+
   stylix = {
     enable = true;
 
