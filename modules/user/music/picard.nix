@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  home.packages = [pkgs.picard];
+  home.packages = with pkgs; [picard chromaprint];
 }

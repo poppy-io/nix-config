@@ -14,16 +14,16 @@
 
     defaultLocale = "en_GB.UTF-8";
 
-    inputMethod = {
-      enabled = "fcitx5";
-      fcitx5 = {
-        waylandFrontend = true;
-        addons = with pkgs; [
-          fcitx5-gtk
-          fcitx5-rose-pine # colour theme; consider also fcitx5-nord or fcitx5-material-color
-        ];
-      };
-    };
+    #inputMethod = {
+    #  enabled = "fcitx5";
+    #  fcitx5 = {
+    #    waylandFrontend = true;
+    #    addons = with pkgs; [
+    #      fcitx5-gtk
+    #      fcitx5-rose-pine # colour theme; consider also fcitx5-nord or fcitx5-material-color
+    #    ];
+    #  };
+    #};
   };
 
   # use equivalent BÁC timezone due to lack of Scottish option
