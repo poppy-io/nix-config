@@ -2,6 +2,8 @@
   sysmodules = ./. + "/../../modules/system";
 in {
   imports = map (x: "${sysmodules}" + x) [
+    "/caching.nix"
+
     "/boot.nix"
     "/greetd.nix"
 
