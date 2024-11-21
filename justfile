@@ -1,18 +1,24 @@
 default: up deploy
 
-deploy: nixos-rebuild switch --flake .
+deploy:
+  nixos-rebuild switch --flake .
 
-debug: nixos-rebuild switch --flake . --show-trace --verbose
+debug:
+  nixos-rebuild switch --flake . --show-trace --verbose
 
-up: nix flake update
+up:
+  nix flake update
 
 # Update specific input
 # usage: make upp i=home-manager
-upp: nix flake update $(i)
+upp:
+  nix flake update $(i)
 
-history: nix profile history --profile /nix/var/nix/profiles/system
+history:
+  nix profile history --profile /nix/var/nix/profiles/system
 
-repl: nix repl -f flake:nixpkgs
+repl:
+  nix repl -f flake:nixpkgs
 
 clean:
   # remove all generations older than 7 days
