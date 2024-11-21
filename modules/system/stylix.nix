@@ -24,6 +24,12 @@
     #  terminal = 0.7;
     #};
 
+    cursor = {
+      package = pkgs.openzone-cursors;
+      name = "OpenZone_Black";
+      size = 24;
+    };
+
     fonts = {
       serif = {
         package = pkgs.prociono;
