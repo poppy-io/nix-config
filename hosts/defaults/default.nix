@@ -3,6 +3,7 @@
 in {
   imports = map (x: "${sysmodules}" + x) [
     "/caching.nix"
+    "/just.nix"
 
     "/boot.nix"
     "/greetd.nix"

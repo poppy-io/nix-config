@@ -157,6 +157,10 @@
   (setq rustic-cargo-clippy-trigger-fix 'on-compile))
 (push 'rustic-clippy flycheck-checkers)
 
+;;; Just
+(use-package just-mode)
+(use-package justl)
+
 ;;;; PROJECT MANAGEMENT
 (use-package projectile
   :init
