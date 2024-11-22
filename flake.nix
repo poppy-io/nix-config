@@ -58,6 +58,7 @@
     lanzaboote,
     spicetify-nix,
     lix,
+    prismlauncher,
     ...
   }: {
     nixosConfigurations = {

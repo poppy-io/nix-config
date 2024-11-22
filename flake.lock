@@ -195,6 +195,22 @@
     "flake-compat_4": {
       "flake": false,
       "locked": {
+        "lastModified": 1696426674,
+        "narHash": "sha256-kvjfFW7WAETZlt09AgDn1MrtKzP7t90Vf7vypd3OL1U=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "0f9255e01c2351cc7d116c072cb317785dd33b33",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
+    "flake-compat_5": {
+      "flake": false,
+      "locked": {
         "lastModified": 1673956053,
         "narHash": "sha256-4gtG9iQuiKITOjNQQeQIpoIB6b16fm+504Ch3sNKLd8=",
         "owner": "edolstra",
@@ -424,6 +440,22 @@
         "type": "github"
       }
     },
+    "libnbtplusplus": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1699286814,
+        "narHash": "sha256-yy0q+bky80LtK1GWzz7qpM+aAGrOqLuewbid8WT1ilk=",
+        "owner": "PrismLauncher",
+        "repo": "libnbtplusplus",
+        "rev": "23b955121b8217c1c348a9ed2483167a6f3ff4ad",
+        "type": "github"
+      },
+      "original": {
+        "owner": "PrismLauncher",
+        "repo": "libnbtplusplus",
+        "type": "github"
+      }
+    },
     "lix": {
       "flake": false,
       "locked": {
@@ -461,6 +493,21 @@
         "url": "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz"
       }
     },
+    "nix-filter": {
+      "locked": {
+        "lastModified": 1730207686,
+        "narHash": "sha256-SCHiL+1f7q9TAnxpasriP6fMarWE5H43t25F5/9e28I=",
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "rev": "776e68c1d014c3adde193a18db9d738458cd2ba4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "type": "github"
+      }
+    },
     "nixos-hardware": {
       "locked": {
         "lastModified": 1731797098,
@@ -479,11 +526,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1732269213,
-        "narHash": "sha256-Mrt4opMsoBdT1vq3hkkh/Ibm1ZX5WjHKU089EtgeiAU=",
+        "lastModified": 1732279753,
+        "narHash": "sha256-8Tn17WOlzKEXehO6aEi1mR3DvcJW3m6u7RkzwfCnFnI=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "1f8150661e78f70bda0b51893344326fc2ca264c",
+        "rev": "8b14b5156649d5382f2a38af2d446ae6ba5ca00a",
         "type": "github"
       },
       "original": {
@@ -567,6 +614,29 @@
         "type": "github"
       }
     },
+    "prismlauncher": {
+      "inputs": {
+        "flake-compat": "flake-compat_3",
+        "libnbtplusplus": "libnbtplusplus",
+        "nix-filter": "nix-filter",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1732090354,
+        "narHash": "sha256-TCShwM25YXlEwA/Wiy4Rmso4/rG49VKezb68B1moNa0=",
+        "owner": "PrismLauncher",
+        "repo": "PrismLauncher",
+        "rev": "79dd912126a3eb498b6cc19575f4d4cfc935978b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "PrismLauncher",
+        "repo": "PrismLauncher",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "NUR": "NUR",
@@ -578,6 +648,7 @@
         "lix-module": "lix-module",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
+        "prismlauncher": "prismlauncher",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix"
       }
@@ -609,7 +680,7 @@
     },
     "spicetify-nix": {
       "inputs": {
-        "flake-compat": "flake-compat_3",
+        "flake-compat": "flake-compat_4",
         "nixpkgs": [
           "nixpkgs"
         ]
@@ -634,7 +705,7 @@
         "base16-fish": "base16-fish",
         "base16-helix": "base16-helix",
         "base16-vim": "base16-vim",
-        "flake-compat": "flake-compat_4",
+        "flake-compat": "flake-compat_5",
         "flake-utils": "flake-utils_3",
         "gnome-shell": "gnome-shell",
         "home-manager": "home-manager_2",
