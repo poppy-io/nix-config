@@ -33,8 +33,10 @@
   services.flameshot = {
     enable = true;
     settings = {
-      disabledTrayIcon = true;
-      showStartupLaunchMessage = false;
+      General = {
+        disabledTrayIcon = true;
+        showStartupLaunchMessage = false;
+      };
     };
   };
 
