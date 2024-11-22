@@ -1,5 +1,5 @@
 {
-  imports = [
-    ./flameshot.nix
+  nixpkgs.overlays = [
+    (import ./flameshot.nix)
   ];
 }
