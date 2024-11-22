@@ -4,7 +4,7 @@
   ...
 }: {
   wayland.windowManager.sway.config.keybindings = let
-    flameshot = pkgs.flameshot;
+    flameshot = lib.getExe pkgs.flameshot;
     xdg-user-dir = "~/pictures";
   in
     lib.mkOptionDefault {
