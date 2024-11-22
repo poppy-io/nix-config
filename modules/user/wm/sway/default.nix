@@ -30,6 +30,14 @@
     enable = true;
   };
 
+  services.flameshot = {
+    enable = true;
+    settings = {
+      disabledTrayIcon = true;
+      showStartupLaunchMessage = false;
+    };
+  };
+
   home.packages = with pkgs; [
     clipman
     swayfx
