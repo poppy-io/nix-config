@@ -1,6 +1,6 @@
-default: up deploy
+default: up rebuild
 
-deploy:
+rebuild:
   nixos-rebuild switch --flake .
 
 debug:
