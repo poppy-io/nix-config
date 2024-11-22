@@ -46,7 +46,7 @@ in {
   system.activationScripts.diff = ''
     if [[ -e /run/current-system ]]; then
       echo
-      ${pkgs.nushell}/bin/nu -c "let diff_closure = ${pkgs.nix}/bin/nix store diff-closures /run/current-system '$systemConfig'; echo \$diff_closure; if \$diff_closure != \"\" {
+      ${pkgs.nushell}/bin/nu -c "let diff_closure = ${pkgs.nix}/bin/nix store diff-closures /run/current-system '$systemConfig'; echo \"Z\" + \$diff_closure + \"Z\"; if \$diff_closure != \"\" {
         let table = \$diff_closure
         | lines
         | where \$it =~ KiB
