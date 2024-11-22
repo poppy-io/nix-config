@@ -35,7 +35,7 @@
     settings = {
       General = {
         disabledTrayIcon = true;
-        showStartupLaunchMessage = false;
+        showStartupLaunchMessage = true;
       };
     };
   };
@@ -44,5 +44,6 @@
     clipman
     swayfx
     wdisplays # GUI display manager for wlroots
+    grim # flameshot requirement on wayland ?
   ];
 }

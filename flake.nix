@@ -93,6 +93,8 @@
             home-manager.extraSpecialArgs = {inherit inputs;};
             home-manager.users.poppy = import ./hosts/poppybox/users/poppy;
           }
+
+          (import ./overlays)
         ];
 
         specialArgs = {inherit inputs;};
@@ -126,6 +128,8 @@
             home-manager.extraSpecialArgs = {inherit inputs;};
             home-manager.users = import ./hosts/poppypad-A485/users/poppy;
           }
+
+          (import ./overlays)
         ];
 
         specialArgs = {inherit inputs;};
