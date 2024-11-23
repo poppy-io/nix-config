@@ -4,7 +4,7 @@
   ];
 
   # tiling window manager. replaced with swayfx under the hood (probably)
-  wayland.windowManager.sway = {
+  wayland.windowManager.sway.config = {
     package = pkgs.swayfx;
     enable = true;
     systemd.enable = true;
@@ -13,7 +13,10 @@
     config = {
       modifier = "Mod4";
       terminal = "kitty";
-      startup = [{command = "vesktop";}];
+      startup = [
+        {command = "exec systemctl --user import-environment PATH && systemctl --user restart xdg-desktop-portal.service";}
+        {command = "vesktop";}
+      ];
       window.titlebar = false;
 
       bars = [
@@ -40,7 +43,7 @@
     };
   };
 
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     clipman
     swayfx
     wdisplays # GUI display manager for wlroots
