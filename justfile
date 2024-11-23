@@ -8,6 +8,10 @@ debug:
 
 up:
   nix flake update
+  git reset
+  git add ./flake.lock
+  git commit -m "update flake.lock"
+  git push
 
 # Update specific input
 # usage: make upp i=home-manager
