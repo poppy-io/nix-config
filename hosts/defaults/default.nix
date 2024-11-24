@@ -34,6 +34,23 @@ in {
     extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
   };
 
+  systemd.services."user@1000".serviceConfig.LimitNOFILE = "32768";
+  systemd.services."poppy".serviceConfig.LimitNOFILE = "32768";
+  security.pam.loginLimits = [
+    {
+      domain = "*";
+      item = "nofile";
+      type = "-";
+      value = "32768";
+    }
+    {
+      domain = "*";
+      item = "memlock";
+      type = "-";
+      value = "32768";
+    }
+  ];
+
   home-manager.backupFileExtension = "backup";
 
   services.gnome.gnome-keyring.enable = true;
