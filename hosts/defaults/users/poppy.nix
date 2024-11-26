@@ -4,7 +4,20 @@ in {
   home.username = "poppy";
   home.homeDirectory = "/home/poppy";
 
-  imports = map (x: "${usrmodules}" + x) [];
+  imports = map (x: "${usrmodules}" + x) [
+    "/shell"
+    "/wm"
+    "/editor"
+    "/browser"
+    "/terminal"
+    "/music"
+
+    "/numlock.nix"
+    "/git.nix"
+    "/stylix.nix"
+    "/yazi.nix"
+    "/discord.nix"
+  ];
 
   programs = {
     home-manager.enable = true;

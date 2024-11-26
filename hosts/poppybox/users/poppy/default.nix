@@ -3,17 +3,6 @@
 in {
   imports =
     map (x: "${usrmodules}" + x) [
-      "/shell"
-      "/wm"
-      "/editor"
-      "/browser"
-      "/terminal"
-      "/music"
-
-      "/git.nix"
-      "/stylix.nix"
-      "/yazi.nix"
-      "/discord.nix"
       "/xivlauncher.nix"
     ]
     ++ [
