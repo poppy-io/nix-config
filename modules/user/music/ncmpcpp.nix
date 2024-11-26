@@ -11,8 +11,8 @@
       visualizer_data_source = "/tmp/mpd.fifo";
       visualizer_output_name = "music_visualiser_fifo";
       visualizer_in_stereo = "yes";
-      visualiser_type = "wave_filled";
-      visualiser_look = "+|";
+      visualizer_type = "wave_filled";
+      visualizer_look = "+|";
     };
   };
 }
