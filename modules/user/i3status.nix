@@ -3,9 +3,11 @@
     enable = true;
     bars = {
       top = {
+        icons = "material-nf";
+
         settings = {
           theme = {
-            theme = "solarized-dark";
+            theme = "gruvbox-light";
             # TODO: manual stylix integration
             #overrides = {
             #  idle_bg = config.lib.stylix.colors.base00;
@@ -29,9 +31,8 @@
 
         blocks = [
           {
-            block = "time";
-            interval = 60;
-            format = " $timestamp.datetime(f:'%a %d/%m %R') ";
+            block = "music";
+            format = " $icon {$combo.str(max_w:50) $play $next |}";
           }
           {
             block = "cpu";
@@ -49,6 +50,11 @@
             warning = 20.0;
             alert = 10.0;
             format = " $icon root: $available.eng(w:2) ";
+          }
+          {
+            block = "time";
+            interval = 60;
+            format = " $timestamp.datetime(f:'%a %d/%m %R') ";
           }
         ];
       };

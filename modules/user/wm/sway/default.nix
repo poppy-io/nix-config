@@ -17,7 +17,13 @@
         {command = "exec systemctl --user import-environment PATH && systemctl --user restart xdg-desktop-portal.service";}
         {command = "vesktop";}
       ];
+
       window.titlebar = false;
+
+      gaps = {
+        inner = 10;
+        #smartGaps = true;
+      };
 
       bars = [
         {

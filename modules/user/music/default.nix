@@ -4,6 +4,6 @@
     ./mpd.nix
     ./soulseek.nix
     ./picard.nix
-    ./rmpc
+    ./ncmpcpp.nix
   ];
 }
