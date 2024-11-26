@@ -3,8 +3,8 @@
     packages = with pkgs; [
       sarasa-gothic
       ipafont
-      nerd-fonts.IosevkaTerm
-      nerd-fonts.IosevkaTermSlab
+      nerd-fonts.iosevka-term
+      nerd-fonts.iosevka-term-slab
       noto-fonts-emoji
       noto-fonts
       prociono
