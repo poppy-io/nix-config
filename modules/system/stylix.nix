@@ -14,8 +14,8 @@
       url = "https://www.jame-world.com/media/image/2004-00/1643.jpg";
       sha256 = "Mh6P/DWg9AozNyPm/RzpBCc30uHf7FIW8pDc8D2Q/oM=";
     };
-    polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/brushtrees.yaml";
+    polarity = "light";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-light.yaml";
 
     #opacity = {
     #  applications = 0.7;

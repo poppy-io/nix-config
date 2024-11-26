@@ -13,7 +13,6 @@ in {
       "/git.nix"
       "/stylix.nix"
       "/yazi.nix"
-      "/i3status.nix"
       "/discord.nix"
       "/xivlauncher.nix"
     ]
