@@ -3,12 +3,8 @@
     packages = with pkgs; [
       sarasa-gothic
       ipafont
-      (nerdfonts.override {
-        fonts = [
-          "IosevkaTerm"
-          "IosevkaTermSlab"
-        ];
-      })
+      nerd-fonts.IosevkaTerm
+      nerd-fonts.IosevkaTermSlab
       noto-fonts-emoji
       noto-fonts
       prociono

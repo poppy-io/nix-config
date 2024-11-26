@@ -31,23 +31,15 @@ in {
 
   users.users.poppy = {
     isNormalUser = true;
-    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel"];
   };
 
-  systemd.services."user@1000".serviceConfig.LimitNOFILE = "32768";
-  systemd.services."poppy".serviceConfig.LimitNOFILE = "32768";
   security.pam.loginLimits = [
     {
-      domain = "*";
-      item = "nofile";
+      domain = "@users";
+      item = "rtprio";
       type = "-";
-      value = "32768";
-    }
-    {
-      domain = "*";
-      item = "memlock";
-      type = "-";
-      value = "32768";
+      value = "1";
     }
   ];
 
