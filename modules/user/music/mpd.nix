@@ -6,6 +6,7 @@
       audio_output {
         type "pipewire"
         name "music_pipewire"
+        buffer_time "100000"
       }
 
       audio_output {
@@ -13,6 +14,7 @@
         name "music_visualiser_fifo"
         path "/tmp/mpd.fifo"
         format "44100:16:2"
+        buffer_time "100000"
       }
 
       playlist_plugin {

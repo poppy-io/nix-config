@@ -9,7 +9,7 @@
   i18n = {
     supportedLocales = [
       "C.UTF-8/UTF-8"
-      "en_GB.UTF-8/UTF-8"
+      "en_IE.UTF-8/UTF-8"
     ];
 
     defaultLocale = "en_GB.UTF-8";
