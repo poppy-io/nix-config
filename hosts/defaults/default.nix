@@ -18,6 +18,8 @@ in {
     "/fonts.nix"
     "/i18n"
     "/stylix.nix"
+
+    "/mpdscribble.nix"
   ];
 
   environment.systemPackages = with pkgs; [

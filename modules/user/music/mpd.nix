@@ -1,4 +1,5 @@
 {
+  # make sure to also add system/mpdscribble.nix for scrobbling!
   services.mpd = {
     enable = true;
     musicDirectory = "/mnt/share/music";
@@ -30,13 +31,5 @@
 
   services.mpdris2 = {
     enable = true;
-  };
-
-  services.mpdscribble = {
-    enable = true;
-    endpoints.lastfm = {
-      username = "poppy_io";
-      passwordFile = ./../../../secrets/lastfm.txt;
-    };
   };
 }
