@@ -12,7 +12,7 @@
       "en_IE.UTF-8/UTF-8"
     ];
 
-    defaultLocale = "en_GB.UTF-8";
+    defaultLocale = "en_IE.UTF-8";
 
     #inputMethod = {
     #  enabled = "fcitx5";
