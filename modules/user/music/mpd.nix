@@ -31,4 +31,12 @@
   services.mpdris2 = {
     enable = true;
   };
+
+  services.mpdscribble = {
+    enable = true;
+    endpoints.lastfm = {
+      username = "poppy_io";
+      passwordFile = ./../../../secrets/lastfm.txt;
+    };
+  };
 }
