@@ -2,9 +2,9 @@
   # not at user level because its missing in home manager
   services.mpdscribble = {
     enable = true;
-    endpoints.lastfm = {
+    endpoints."last.fm" = {
       username = "poppy_io";
-      passwordFile = ./../../../secrets/lastfm.txt;
+      passwordFile = "/home/poppy/nix-config/secrets/lastfm.txt";
     };
   };
 }
