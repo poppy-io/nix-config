@@ -12,7 +12,7 @@
       visualizer_output_name = "music_visualiser_fifo";
       visualizer_in_stereo = "yes";
       visualizer_type = "spectrum";
-      visualizer_look = "";
+      visualizer_look = "+|";
     };
   };
 }

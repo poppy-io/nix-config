@@ -32,15 +32,15 @@
         blocks = [
           {
             block = "music";
-            format = " $icon {$combo.str(max_w:50) $play $next |}";
+            format = "$icon {$combo.str(max_w:50) $play $next |}";
           }
           {
             block = "cpu";
           }
           {
             block = "memory";
-            format = " $icon $mem_total_used_percents.eng(w:2) ";
-            format_alt = " $icon_swap $swap_used_percents.eng(w:2) ";
+            format = "$icon $mem_total_used_percents.eng(w:2) ";
+            format_alt = "$icon_swap $swap_used_percents.eng(w:2) ";
           }
           {
             block = "disk_space";
@@ -49,12 +49,12 @@
             interval = 20;
             warning = 20.0;
             alert = 10.0;
-            format = " $icon : $available.eng(w:2) ";
+            format = "$icon $available.eng(w:2) ";
           }
           {
             block = "time";
             interval = 60;
-            format = " $timestamp.datetime(f:'%a %d/%m %R') ";
+            format = "$timestamp.datetime(f:'%a %d/%m %R') ";
           }
         ];
       };
