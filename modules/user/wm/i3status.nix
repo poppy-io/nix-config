@@ -1,4 +1,4 @@
-{
+{config, ...}: {
   programs.i3status-rust = {
     enable = true;
     bars = {
@@ -6,42 +6,51 @@
         icons = "material-nf";
 
         settings = {
-          theme = {
-            theme = "gruvbox-light";
-            # TODO: manual stylix integration
-            #overrides = {
-            #  idle_bg = config.lib.stylix.colors.base00;
-            #  idle_fg =
-            #  good_bg =
-            #  good_fg =
-            #  warning_bg =
-            #  warning_fg =
-            #  critical_bg =
-            #  info_bg =
-            #  info_fg =
-            #  alternating_tint_bg =
-            #  alternating_tint_fg =
-            #  separator_bg =
-            #  separator_fg =
-            #  separator =
-            #  end_separator =
-            #};
+          theme = let
+            stylix_theme = config.lib.stylix.colors;
+          in {
+            theme = "modern";
+            overrides = {
+              idle_bg = "#" + stylix_theme.base00;
+              idle_fg = "#" + stylix_theme.base05;
+              good_bg = "#" + stylix_theme.base0B;
+              good_fg = "#" + stylix_theme.base00;
+              warning_bg = "#" + stylix_theme.base09;
+              warning_fg = "#" + stylix_theme.base00;
+              critical_bg = "#" + stylix_theme.base08;
+              critical_fg = "#" + stylix_theme.base00;
+              info_bg = "#" + stylix_theme.base0D;
+              info_fg = "#" + stylix_theme.base00;
+              alternating_tint_bg = "#111111";
+              separator_bg = "auto";
+              separator_fg = "auto";
+            };
           };
         };
 
         blocks = [
           {
             block = "music";
-            format = "$icon {$combo.str(max_w:50) $play $next |}";
+            format = "$icon {$combo.str(max_w:100) $play $next |}";
           }
+
           {
             block = "cpu";
           }
+
+          {
+            block = "amd_gpu";
+            format = " $icon $utilization ";
+            format_alt = " $icon MEM: $vram_used_percents ($vram_used/$vram_total) ";
+            interval = 1;
+          }
+
           {
             block = "memory";
             format = "$icon $mem_total_used_percents.eng(w:2) ";
             format_alt = "$icon_swap $swap_used_percents.eng(w:2) ";
           }
+
           {
             block = "disk_space";
             path = "/";
@@ -51,6 +60,7 @@
             alert = 10.0;
             format = "$icon $available.eng(w:2) ";
           }
+
           {
             block = "time";
             interval = 60;
