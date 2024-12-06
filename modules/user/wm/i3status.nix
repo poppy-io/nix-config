@@ -3,7 +3,7 @@
     enable = true;
     bars = {
       top = {
-        icons = "material-nf";
+        icons = "awesome6";
 
         settings = {
           theme = let
