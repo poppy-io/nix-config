@@ -16,6 +16,12 @@
         path "/tmp/mpd.fifo"
         format "44100:16:2"
         buffer_time "100000"
+        filters "visualiser_normalise"
+      }
+
+      filter {
+        plugin "normalize"
+        name "visualiser_normalise"
       }
 
       playlist_plugin {
