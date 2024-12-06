@@ -5,7 +5,6 @@
 
   # tiling window manager. replaced with swayfx under the hood (probably)
   wayland.windowManager.sway = {
-    package = pkgs.swayfx;
     enable = true;
     systemd.enable = true;
     checkConfig = false;
