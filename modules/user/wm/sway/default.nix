@@ -26,6 +26,11 @@
 
       bars = [
         {
+          fonts = {
+            names = ["IosevkaTerm Nerd Font" "FontAwesome6Free"];
+            size = 10.0;
+          };
+
           position = "top";
           statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-top.toml";
         }
@@ -52,5 +57,6 @@
     clipman
     wdisplays # GUI display manager for wlroots
     grim # flameshot requirement on wayland ?
+    font-awesome
   ];
 }
