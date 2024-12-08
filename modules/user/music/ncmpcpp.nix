@@ -34,6 +34,10 @@
       follow_now_playing_lyrics = "yes";
       fetch_lyrics_for_current_song_in_background = "yes";
       store_lyrics_in_song_dir = "no";
+
+      # playlist
+      playlist_separate_albums = "yes";
+      playlist_shorten_total_times = "yes";
     };
   };
 }
