@@ -9,6 +9,13 @@
 
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [2416 59197 59198]; # soulseek
+    allowedTCPPorts = [
+      # soulseek
+      2416
+      59197
+      59198
+
+      9090 # calibre
+    ];
   };
 }
