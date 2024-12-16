@@ -4,6 +4,7 @@ in {
   imports =
     map (x: "${usrmodules}" + x) [
       "/xivlauncher.nix"
+      "/ebooks/calibre.nix"
     ]
     ++ [
       ../../../defaults/users/poppy.nix
