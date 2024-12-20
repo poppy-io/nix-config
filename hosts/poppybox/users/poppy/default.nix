@@ -5,6 +5,7 @@ in {
     map (x: "${usrmodules}" + x) [
       "/xivlauncher.nix"
       "/ebooks/calibre.nix"
+      "/ebooks/sftp.nix"
     ]
     ++ [
       ../../../defaults/users/poppy.nix

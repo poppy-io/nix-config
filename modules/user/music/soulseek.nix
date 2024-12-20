@@ -1,4 +1,4 @@
 {pkgs, ...}: {
   # use proprietary client cause nicotine crashes nonstop :(
-  home.packages = with pkgs; [soulseekqt shntool];
+  home.packages = with pkgs; [soulseekqt flacon];
 }
