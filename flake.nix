@@ -49,32 +49,21 @@
     };
   };
 
-  outputs = inputs @ {
-    self,
-    nixpkgs,
-    lix-module,
-    home-manager,
-    aagl,
-    lanzaboote,
-    spicetify-nix,
-    lix,
-    prismlauncher,
-    ...
-  }: {
+  outputs = {nixpkgs, ...} @ inputs: {
     nixosConfigurations = {
       "poppybox" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-
         modules = [
-          lix-module.nixosModules.default
-          aagl.nixosModules.default
-          lanzaboote.nixosModules.lanzaboote
+          {nixpkgs.hostPlatform = "x86_64-linux";}
+
+          inputs.lix-module.nixosModules.default
+          inputs.aagl.nixosModules.default
+          inputs.lanzaboote.nixosModules.lanzaboote
           inputs.spicetify-nix.nixosModules.default
 
           {
             # should move this to a package by package override at some point
             nixpkgs.config.allowUnfree = true;
-            nixpkgs.overlays = [(import self.inputs.emacs-overlay)];
+            nixpkgs.overlays = [(import inputs.emacs-overlay)];
 
             nix.settings = {
               experimental-features = ["nix-command" "flakes"];
@@ -84,7 +73,7 @@
           ./hosts/defaults
           ./hosts/poppybox
 
-          home-manager.nixosModules.home-manager
+          inputs.home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -100,16 +89,16 @@
         specialArgs = {inherit inputs;};
       };
 
-      "poppypad-A485" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-
+      "poppypad-A485" = inputs.nixpkgs.lib.nixosSystem {
         modules = [
-          lix-module.nixosModules.default
-          spicetify-nix.nixosModules.default
+          {nixpkgs.hostPlatform = "x86_64-linux";}
+
+          inputs.lix-module.nixosModules.default
+          inputs.spicetify-nix.nixosModules.default
 
           {
             nixpkgs.config.allowUnfree = true;
-            nixpkgs.overlays = [(import self.inputs.emacs-overlay)];
+            nixpkgs.overlays = [(import inputs.emacs-overlay)];
 
             nix.settings = {
               experimental-features = ["nix-command" "flakes"];
@@ -119,7 +108,7 @@
           ./hosts/defaults
           ./hosts/poppypad-A485
 
-          home-manager.nixosModules.home-manager
+          inputs.home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
