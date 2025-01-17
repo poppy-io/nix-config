@@ -27,6 +27,7 @@ in {
     curl
     wget
     ripgrep
+    comma
   ];
 
   users.defaultUserShell = pkgs.nushell;
