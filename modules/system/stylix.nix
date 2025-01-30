@@ -9,6 +9,7 @@
   };
   colourscheme = "ayu-light";
   theme = "${pkgs.base16-schemes}/share/themes/${colourscheme}.yaml";
+  fillColour = "${pkgs.yq} -r .palette.base00 ${theme}";
 in {
   imports = [inputs.stylix.nixosModules.stylix];
 
@@ -17,8 +18,9 @@ in {
   stylix = {
     enable = true;
 
-    image = pkgs.runCommandNoCC "image.png" {buildInputs = [pkgs.lutgen];} ''
-      lutgen apply -s 36 ${inputImage} -o $out -p ${colourscheme}
+    image = pkgs.runCommandNoCC "image.png" {buildInputs = [pkgs.lutgen pkgs.imagemagick];} ''
+      lutgen apply -s 36 ${inputImage} -o image1.png -p ${colourscheme};
+      magick -gravity center -background ${fillColour} -frame 1440x2560 $out
     '';
     base16Scheme = theme;
 
