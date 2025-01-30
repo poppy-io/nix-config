@@ -20,8 +20,8 @@ in {
     base16Scheme = theme;
 
     image = pkgs.runCommandNoCC "image.png" {buildInputs = [pkgs.lutgen pkgs.imagemagick];} ''
-      lutgen apply -s 36 ${inputImage} -o image1.png -p ${colourscheme};
-      magick image1.png -gravity center -background "${config.lib.stylix.colors.withHashtag.base00}" -frame 1440x2560 $out
+      magick ${inputImage} -gravity center -background "${config.lib.stylix.colors.withHashtag.base00}" -extent 1920x1080 image1.png;
+      lutgen apply -s 36 image1.png -o $out -p ${colourscheme}
     '';
 
     #opacity = {
