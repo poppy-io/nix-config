@@ -115,7 +115,7 @@
             home-manager.backupFileExtension = "backup";
 
             home-manager.extraSpecialArgs = {inherit inputs;};
-            home-manager.users = import ./hosts/poppypad-A485/users/poppy;
+            home-manager.users.poppy = import ./hosts/poppypad-A485/users/poppy;
           }
 
           (import ./overlays)
