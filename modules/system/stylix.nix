@@ -1,6 +1,7 @@
 {
   inputs,
   pkgs,
+  config,
   ...
 }: let
   inputImage = pkgs.fetchurl {
@@ -9,7 +10,6 @@
   };
   colourscheme = "ayu-light";
   theme = "${pkgs.base16-schemes}/share/themes/${colourscheme}.yaml";
-  fillColour = "${pkgs.yq} -r .palette.base00 ${theme}";
 in {
   imports = [inputs.stylix.nixosModules.stylix];
 
@@ -17,12 +17,12 @@ in {
 
   stylix = {
     enable = true;
+    base16Scheme = theme;
 
     image = pkgs.runCommandNoCC "image.png" {buildInputs = [pkgs.lutgen pkgs.imagemagick];} ''
       lutgen apply -s 36 ${inputImage} -o image1.png -p ${colourscheme};
-      magick -gravity center -background ${fillColour} -frame 1440x2560 $out
+      magick image1.png -gravity center -background "${config.lib.stylix.colors.withHashtag.base00}" -frame 1440x2560 $out
     '';
-    base16Scheme = theme;
 
     #opacity = {
     #  applications = 0.7;
