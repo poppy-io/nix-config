@@ -2,7 +2,14 @@
   inputs,
   pkgs,
   ...
-}: {
+}: let
+  inputImage = pkgs.fetchurl {
+    url = "https://imgv2-2-f.scribdassets.com/img/document/554161533/original/5f83777e82/1?v=1";
+    sha256 = "sha256-VIWzmJlgHW3N5QbObi0D7ZBjQR9RW7yhxNOaryJHeok=";
+  };
+  colourscheme = "ayu-light";
+  theme = "${pkgs.base16-schemes}/share/themes/${colourscheme}.yaml";
+in {
   imports = [inputs.stylix.nixosModules.stylix];
 
   environment.systemPackages = [pkgs.adwaita-icon-theme];
@@ -10,12 +17,10 @@
   stylix = {
     enable = true;
 
-    image = pkgs.fetchurl {
-      url = "https://www.jame-world.com/media/image/2004-00/1643.jpg";
-      sha256 = "Mh6P/DWg9AozNyPm/RzpBCc30uHf7FIW8pDc8D2Q/oM=";
-    };
-    polarity = "light";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-light.yaml";
+    image = pkgs.runCommandNoCC "image.png" {buildInputs = [pkgs.lutgen];} ''
+      lutgen apply -s 36 ${inputImage} -o $out -p ${colourscheme}
+    '';
+    base16Scheme = theme;
 
     #opacity = {
     #  applications = 0.7;
