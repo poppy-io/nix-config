@@ -8,16 +8,15 @@ in {
       "/editor"
       "/browser"
       "/terminal"
+      "/music"
 
       "/git.nix"
-      "/spotify.nix"
       "/stylix.nix"
       "/yazi.nix"
-      "/i3status.nix"
       "/discord.nix"
     ]
     ++ [
-      ../../../common/users/poppy.nix
+      ../../../defaults/users/poppy.nix
       ./modules
     ];
 
@@ -36,4 +35,6 @@ in {
       onlyoffice-bin
     ];
   };
+
+  home.stateVersion = "24.05";
 }

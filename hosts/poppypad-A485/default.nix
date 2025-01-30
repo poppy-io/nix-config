@@ -9,4 +9,6 @@ in {
       ./modules
     ]
     ++ map (x: "${sysmodules}" + x) [];
+
+    system.stateVersion = "23.11";
 }

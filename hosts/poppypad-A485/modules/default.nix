@@ -1,6 +1,5 @@
 {...}: {
   imports = [
-    ./inputs.nix
-    ./outputs.nix
+    ./boot.nix
   ];
 }
