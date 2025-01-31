@@ -11,6 +11,7 @@ in {
     "/browser"
     "/terminal"
     "/music"
+    "/images"
 
     "/numlock.nix"
     "/git.nix"

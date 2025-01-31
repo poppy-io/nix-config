@@ -17,7 +17,7 @@ in {
 
     "/fonts.nix"
     "/i18n"
-    "/stylix.nix"
+    "/theming"
 
     "/mpdscribble.nix"
   ];
