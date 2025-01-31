@@ -1,13 +1,9 @@
 {
   inputs,
   pkgs,
-  config,
   ...
 }: let
-  inputImage = pkgs.fetchurl {
-    url = "https://imgv2-2-f.scribdassets.com/img/document/554161533/original/5f83777e82/1?v=1";
-    sha256 = "sha256-VIWzmJlgHW3N5QbObi0D7ZBjQR9RW7yhxNOaryJHeok=";
-  };
+  inputImage = ./wallpaper.png;
   colourscheme = "ayu-light";
   theme = "${pkgs.base16-schemes}/share/themes/${colourscheme}.yaml";
 in {
@@ -19,11 +15,8 @@ in {
     enable = true;
     base16Scheme = theme;
 
-    image = pkgs.runCommandNoCC "image.png" {buildInputs = [pkgs.lutgen pkgs.imagemagick];} ''
-      FILL_COL="$(magick ${inputImage} -format "%[hex:u.p{50,50}]\n" info:)"
-      magick ${inputImage} -gravity center -background $FILL_COL -frame 1080x1920 image1.png
-      lutgen apply -s 36 image1.png -o $out -p ${colourscheme};
-
+    image = pkgs.runCommandNoCC "image.png" {buildInputs = [pkgs.lutgen];} ''
+      lutgen apply -s 36 ${inputImage} -o $out -p ${colourscheme};
     '';
 
     #opacity = {
