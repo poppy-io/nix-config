@@ -4,7 +4,7 @@
   ...
 }: let
   inputImage = ./wallpaper.png;
-  colourscheme = "ayu-light";
+  colourscheme = "horizon-light";
   theme = "${pkgs.base16-schemes}/share/themes/${colourscheme}.yaml";
 in {
   imports = [inputs.stylix.nixosModules.stylix];
@@ -16,7 +16,7 @@ in {
     base16Scheme = theme;
 
     image = pkgs.runCommandNoCC "image.png" {buildInputs = [pkgs.lutgen];} ''
-      lutgen apply -s 36 ${inputImage} -o $out -p ${colourscheme};
+      lutgen apply -s 128 ${inputImage} -o $out -p ${colourscheme};
     '';
 
     #opacity = {
