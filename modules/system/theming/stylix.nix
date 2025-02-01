@@ -3,8 +3,8 @@
   pkgs,
   ...
 }: let
-  inputImage = ./wallpaper.png;
-  colourscheme = "horizon-light";
+  inputImage = ./wallpaper_inverted.png;
+  colourscheme = "brushtrees-dark";
   theme = "${pkgs.base16-schemes}/share/themes/${colourscheme}.yaml";
 in {
   imports = [inputs.stylix.nixosModules.stylix];
