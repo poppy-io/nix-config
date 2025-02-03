@@ -29,7 +29,7 @@
 ;; set a cute theme for now until emacs overlay works with stylix
 (use-package doom-themes
   :init
-  (load-theme 'doom-fairy-floss))
+  (load-theme 'doom-zenburn))
 
 ;; make M-x and other mini-buffers sortable and filterable
 (use-package ivy

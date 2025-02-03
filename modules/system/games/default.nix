@@ -2,6 +2,7 @@
   imports = [
     #./retroarch.nix
     ./ryujinx.nix
+    ./cemu.nix
     ./steam.nix
     ./minecraft.nix
     ./agl
