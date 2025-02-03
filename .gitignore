@@ -8,3 +8,4 @@
 
 # Secrets
 secrets/
+.projectile-cache.eld
