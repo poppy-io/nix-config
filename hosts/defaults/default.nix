@@ -27,6 +27,7 @@ in {
     curl
     wget
     ripgrep
+    htop
     comma
   ];
 
