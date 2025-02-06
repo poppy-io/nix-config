@@ -7,11 +7,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1738816609,
-        "narHash": "sha256-y5cbTsuUCMYigHjV9cD9+zcqpwu+oJIUnVtcnCWmIhg=",
+        "lastModified": 1738863534,
+        "narHash": "sha256-9DayTMrhRweD7lFXSxY4qYSlPaf2biRmkqUvSYi9gbc=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "e853d733b274463ff290f6f756f985406e740f30",
+        "rev": "7b0047bc14df52f83c133789bb3f952b42a67a74",
         "type": "github"
       },
       "original": {
@@ -131,11 +131,11 @@
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1738809425,
-        "narHash": "sha256-bGRsRKHhHBrG8EcJgsRAkFqVzMm2zIS+yns7rdCzvu8=",
+        "lastModified": 1738861981,
+        "narHash": "sha256-QfphE389j/AkIBLrPti7iaWdzRlByxZ9PZdQ0Z9ES5g=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "590d6ecac05c53ae8a87af317efa06f4a99ab116",
+        "rev": "1d19c1885c8807e044eb861162ee0120b6749dea",
         "type": "github"
       },
       "original": {
@@ -485,11 +485,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1738789832,
-        "narHash": "sha256-HdlMPfObPu5y7oDfH/w3vvlU3UTQ/bQjSULChZARm5M=",
+        "lastModified": 1738841109,
+        "narHash": "sha256-sEgE3nifaRU5gfAx33ds0tx/j+qM0/5/bHopv/w6c0c=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "30ea6fed4e4b41693cebc2263373dd810de4de49",
+        "rev": "f99c704fe3a4cf8d72b2d568ec80bc38be1a9407",
         "type": "github"
       },
       "original": {
@@ -564,11 +564,11 @@
     "lix": {
       "flake": false,
       "locked": {
-        "lastModified": 1738817130,
-        "narHash": "sha256-oev3kAk2svfw5Ih/9bP5BqWGvhs1xgGxsIGGBpTmMQc=",
-        "rev": "3b10c19006cd8edf3c577644a59c53f2671e2824",
+        "lastModified": 1738864537,
+        "narHash": "sha256-s7vmuXQEKBwF6DwggW4BBnH/grzfMMHwQYOgiHNlUz8=",
+        "rev": "f3f1a2c3284e9b5ade01963a49bfcf28874d32d4",
         "type": "tarball",
-        "url": "https://git.lix.systems/api/v1/repos/lix-project/lix/archive/3b10c19006cd8edf3c577644a59c53f2671e2824.tar.gz?rev=3b10c19006cd8edf3c577644a59c53f2671e2824"
+        "url": "https://git.lix.systems/api/v1/repos/lix-project/lix/archive/f3f1a2c3284e9b5ade01963a49bfcf28874d32d4.tar.gz?rev=f3f1a2c3284e9b5ade01963a49bfcf28874d32d4"
       },
       "original": {
         "type": "tarball",
@@ -711,11 +711,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1738820802,
-        "narHash": "sha256-V9D0Vstbw4XI7OXE7SaYSM+u+IQiI91iXmAD1rmFzA0=",
+        "lastModified": 1738868127,
+        "narHash": "sha256-O5ne/JSVLQHZ6UaTL+DQ3pieh523/Q43+Rg8pkYibK4=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "29c58cf78dc44b209e40e037b280cbbfc015ef39",
+        "rev": "e0c16b06b5557975efe96961f9169d5e833a4d92",
         "type": "github"
       },
       "original": {
@@ -777,11 +777,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1738789494,
-        "narHash": "sha256-GFnTHx8BUhPFNpd0dMu2zfgqWg1U2bOrXGf9TL8aDpU=",
+        "lastModified": 1738827323,
+        "narHash": "sha256-kM7rPh9kopO4tmJi6AhOlo72lyEBX00bTY3fr0532VQ=",
         "owner": "PrismLauncher",
         "repo": "PrismLauncher",
-        "rev": "7d202e348d603c03a46487829a90637a5886c34a",
+        "rev": "8d143c7b952848181789f996e82a430004a0b105",
         "type": "github"
       },
       "original": {
@@ -836,11 +836,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1738725875,
-        "narHash": "sha256-KJeErSFeuVVo+EOgoZoAKAbh9jOxgd7g/ldgUjbHvOA=",
+        "lastModified": 1738852260,
+        "narHash": "sha256-ysXhwF50dIjLO+BLqNl17k9NqGGYznd9ZwsaNmsDRuI=",
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
-        "rev": "0be8bb03478dad374659369be3b2a5017c63fa61",
+        "rev": "91bd81a382c61ca37afdf996ef38e9d949e0efaf",
         "type": "github"
       },
       "original": {
