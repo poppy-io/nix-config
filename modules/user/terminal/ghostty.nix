@@ -1,3 +1,6 @@
-{ghostty, ...}: {
-  environment.systemPackages = [ghostty.packages.x86_64-linux.default];
+{inputs, ...}: {
+  programs.ghostty = {
+    enable = true;
+    package = inputs.ghostty.packages.x86_64-linux.default;
+  };
 }
