@@ -11,7 +11,7 @@
 
     config = {
       modifier = "Mod4";
-      terminal = "kitty";
+      terminal = "ghostty";
       startup = [
         {command = "exec systemctl --user import-environment PATH && systemctl --user restart xdg-desktop-portal.service";}
         {command = "vesktop";}

@@ -1,5 +1,5 @@
 {
-  imports = [./kitty.nix];
+  imports = [./ghostty.nix];
 
-  home.sessionVariables.TERMINAL = "kitty";
+  home.sessionVariables.TERMINAL = "ghostty";
 }
