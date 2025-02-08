@@ -5,9 +5,7 @@
     configFile.source = ./config.nu;
     envFile.source = ./env.nu;
 
-    extraConfig = ''
-
-    '';
+    #extraConfig = ;
 
     shellAliases = {
       doas = "sudo";
