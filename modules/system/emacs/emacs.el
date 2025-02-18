@@ -28,8 +28,22 @@
 
 ;; set a cute theme for now until emacs overlay works with stylix
 (use-package doom-themes
-  :init
-  (load-theme 'doom-zenburn))
+  :ensure t
+  :config
+  ;; Global settings (defaults)
+  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  (load-theme 'doom-zenburn t)
+
+  ;; Enable flashing mode-line on errors
+  (doom-themes-visual-bell-config)
+  ;; Enable custom neotree theme (nerd-icons must be installed!)
+  (doom-themes-neotree-config)
+  ;; or for treemacs users
+  (setq doom-themes-treemacs-theme "doom-colors") ; use "doom-colors" for less minimal icon theme
+  (doom-themes-treemacs-config)
+  ;; Corrects (and improves) org-mode's native fontification.
+  (doom-themes-org-config))
 
 ;; make M-x and other mini-buffers sortable and filterable
 (use-package ivy
@@ -125,6 +139,8 @@
 
   :config
   (setq lsp-prefer-flymake nil) ; flymake is outdated, we use flycheck
+  (setq lsp-tex-server 'digestif)
+  
   (add-hook 'lsp-mode-hook 'lsp-ui-mode))
 
 (use-package lsp-ui
@@ -136,7 +152,8 @@
 
 ;;; Nix
 (use-package nix-mode
-  :mode "\\.nix\\'")
+  :mode "\\.nix\\'"
+  :hook (nix-mode . lsp-deferred))
 (add-hook 'after-init-hook 'global-nix-prettify-mode)
 
 (use-package company-nixos-options)
@@ -146,7 +163,14 @@
 (setq flycheck-command-wrapper-function
         (lambda (cmd) (apply 'nix-shell-command (nix-current-sandbox) cmd))
       flycheck-executable-find
-        (lambda (cmd) (nix-executable-find (nix-current-sandbox) cmd)))
+      (lambda (cmd) (nix-executable-find (nix-current-sandbox) cmd)))
+
+(use-package lsp-nix
+  :ensure lsp-mode
+  :after (lsp-mode)
+  :demand t
+  :custom
+  (lsp-nix-nil-formatter ["alejandra"]))
 
 ;;; Nushell
 (use-package nushell-mode)
@@ -161,13 +185,47 @@
 (use-package just-mode)
 (use-package justl)
 
+;;; Python
+(use-package ruff-format)
+(add-hook 'python-mode-hook 'ruff-format-on-save-mode)
+
+;;; LaTeX
+(use-package pdf-tools
+  :mode ("\\.pdf\\'" . pdf-tools-modes))
+(use-package reftex
+  :defer t)
+(use-package tex
+  :ensure auctex
+  :mode ("\\.tex\\$" . latex-mode)
+  (TeX-source-correlate-mode t)
+  (TeX-source-correlate-method 'synctax)
+  (TeX-auto-save t)
+  (TeX-parse-self t)
+  (TeX-electric-math (cons "$" "$"))
+  (LaTeX-electric-left-right-brace t)
+  (reftex-plug-into-AUCTeX t)
+  (TeX-view-program-selection '((output-pdf "PDF Tools")))
+  (TeX-source-correlate-start-server t)
+  (TeX-master nil))
+(use-package auctex-latexmk
+  :after tex
+  (auctex-latexmk-inherit-TeX-PDF-mode t)
+  :config
+  (auctex-latexmk-setup))
+(use-package company-auctex
+  :after tex
+  :init
+  (company-auctex-init))
+
 ;;;; PROJECT MANAGEMENT
 (use-package projectile
   :init
   (projectile-mode t)
   :config
   (setq projectile-enable-caching t
-	projectile-completion-system 'ivy))
+	projectile-completion-system 'ivy)
+  (define-key projectile-mode-map (kbd "C-c C-p") projectile-command-map))
+
 (use-package counsel-projectile
   :init
   (counsel-projectile-mode))
@@ -183,3 +241,10 @@
 (use-package which-key
   :config
   (which-key-mode t))
+
+;; org mode
+(setq org-latex-compiler "lualatex")
+
+(provide 'emacs)
+;;; emacs.el ends here
+

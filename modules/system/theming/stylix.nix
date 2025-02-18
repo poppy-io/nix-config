@@ -4,7 +4,7 @@
   ...
 }: let
   inputImage = ./wallpaper_inverted.png;
-  colourscheme = "brushtrees-dark";
+  colourscheme = "zenburn";
   theme = "${pkgs.base16-schemes}/share/themes/${colourscheme}.yaml";
 in {
   imports = [inputs.stylix.nixosModules.stylix];
