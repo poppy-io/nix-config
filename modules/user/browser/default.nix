@@ -1,8 +1,8 @@
 {
-  imports = [./floorp.nix];
+  imports = [./nyxt.nix];
 
   xdg.mimeApps.defaultApplications = let
-    default_browser = "floorp.desktop";
+    default_browser = "nyxt.desktop";
   in {
     "text/html" = default_browser;
     "x-scheme-handler/http" = default_browser;
@@ -19,5 +19,5 @@
     "application/x-extension-xht" = default_browser;
   };
 
-  home.sessionVariables.DEFAULT_BROWSER = "floorp";
+  home.sessionVariables.DEFAULT_BROWSER = "nyxt";
 }

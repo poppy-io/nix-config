@@ -28,7 +28,6 @@
 
 ;; set a cute theme for now until emacs overlay works with stylix
 (use-package doom-themes
-  :ensure t
   :config
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
@@ -44,6 +43,20 @@
   (doom-themes-treemacs-config)
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
+
+;; get icons (if we need them)
+(use-package all-the-icons
+  :if (display-graphic-p))
+(use-package nerd-icons
+  :if (display-graphic-p))
+
+(use-package neotree
+  :config
+  (setq neo-theme 'icons)
+  (setq neo-smart-open t)
+  (global-set-key [f12] 'neotree-toggle))
+
+(setq projectile-switch-project-action 'neotree-projectile-action)
 
 ;; make M-x and other mini-buffers sortable and filterable
 (use-package ivy
@@ -191,12 +204,13 @@
 
 ;;; LaTeX
 (use-package pdf-tools
+  :init (pdf-tools-install)
   :mode ("\\.pdf\\'" . pdf-tools-modes))
-(use-package reftex
-  :defer t)
-(use-package tex
+(use-package latex
   :ensure auctex
   :mode ("\\.tex\\$" . latex-mode)
+  :custom
+  (TeX-engine 'luatex)
   (TeX-source-correlate-mode t)
   (TeX-source-correlate-method 'synctax)
   (TeX-auto-save t)
@@ -207,6 +221,10 @@
   (TeX-view-program-selection '((output-pdf "PDF Tools")))
   (TeX-source-correlate-start-server t)
   (TeX-master nil))
+
+; update pdf buffers after compile
+(add-hook 'TeX-after-compilation-finished-functions
+	  #'TeX-revert-document-buffer)
 (use-package auctex-latexmk
   :after tex
   (auctex-latexmk-inherit-TeX-PDF-mode t)
@@ -224,10 +242,11 @@
   :config
   (setq projectile-enable-caching t
 	projectile-completion-system 'ivy)
-  (define-key projectile-mode-map (kbd "C-c C-p") projectile-command-map))
+  (define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map))
 
 (use-package counsel-projectile
   :init
+  (projectile-known-projects)
   (counsel-projectile-mode))
 
 ;; git
@@ -245,6 +264,13 @@
 ;; org mode
 (setq org-latex-compiler "lualatex")
 
+(use-package emacs
+  :custom
+  (enable-recursive-minibuffers t)
+  (read-extended-command-predicate #'command-completion-default-include-p)
+  (minibuffer-prompt-properties
+   '(read-only t cursor-intangible t face minibuffer-prompt)))
+  
 (provide 'emacs)
 ;;; emacs.el ends here
 
