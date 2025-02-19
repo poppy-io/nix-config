@@ -10,5 +10,6 @@
     # language servers
     texlivePackages.digestif
     nil
+    emacs-all-the-icons-fonts
   ];
 }
