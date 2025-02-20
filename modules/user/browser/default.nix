@@ -1,8 +1,8 @@
 {
-  imports = [./nyxt.nix];
+  imports = [./firefox.nix];
 
   xdg.mimeApps.defaultApplications = let
-    default_browser = "nyxt.desktop";
+    default_browser = "firefox.desktop";
   in {
     "text/html" = default_browser;
     "x-scheme-handler/http" = default_browser;
@@ -19,5 +19,5 @@
     "application/x-extension-xht" = default_browser;
   };
 
-  home.sessionVariables.DEFAULT_BROWSER = "nyxt";
+  home.sessionVariables.DEFAULT_BROWSER = "firefox";
 }

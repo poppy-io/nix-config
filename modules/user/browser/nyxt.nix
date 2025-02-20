@@ -1,3 +1,3 @@
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs; [nyxt];
+  home.packages = with pkgs; [nyxt];
 }
