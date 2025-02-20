@@ -264,6 +264,27 @@
 ;; org mode
 (setq org-latex-compiler "lualatex")
 
+;;;; MULTIMEDIA
+(use-package emms
+  :config
+  (emms-all)
+  (add-to-list 'emms-info-functions 'emms-info-mpd)
+  (add-to-list 'emms-player-list 'emms-player-mpd)
+  (emms-player-mpd-connect)
+  (emms-cache-set-from-mpd-all)
+  
+  :custom
+  (emms-player-mpd-server-name "localhost")
+  (emms-player-mpd-server-port "6600")
+  (emms-volume-change-function 'emms-volume-mpd-change)
+  (emms-browser-covers 'emms-browser-cache-thumbnail)
+  (emms-browser-thumbnail-filter 'emms-browser-thumbnail-filter-all)
+  (scroll-up-aggressively 0.0)
+  (scroll-down-aggressively 0.0)
+  (emms-player-mpd-music-directory "/home/poppy/Music")
+  (emms-browser-covers-file-extensions '("jpg" "png" "bmp" "gif" "tiff")))
+
+
 (use-package emacs
   :custom
   (enable-recursive-minibuffers t)
