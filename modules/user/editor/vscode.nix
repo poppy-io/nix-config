@@ -32,9 +32,6 @@
       ];
     })
 
-    alejandra # nix formatter
-    nil # nix language server
-    gh # github cli
     jq # json
   ];
 
