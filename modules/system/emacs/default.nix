@@ -10,6 +10,11 @@
     # language servers
     texlivePackages.digestif
     nil
+    basedpyright
+
+    alejandra # nix formatter
+    gh # github cli
+
     emacs-all-the-icons-fonts
   ];
 }

@@ -202,6 +202,12 @@
 (use-package ruff-format)
 (add-hook 'python-mode-hook 'ruff-format-on-save-mode)
 
+(use-package lsp-pyright
+  :custom (lsp-pyright-langserver-command "basedpyright")
+  :hook (python-mode . (lambda ()
+			 (require 'lsp-pyright)
+			 (lsp))))
+
 ;;; LaTeX
 (use-package pdf-tools
   :init (pdf-tools-install)
@@ -270,8 +276,11 @@
   (emms-all)
   (add-to-list 'emms-info-functions 'emms-info-mpd)
   (add-to-list 'emms-player-list 'emms-player-mpd)
-  (emms-player-mpd-connect)
+  (add-hook 'emms-playlist-cleared-hook 'emms-player-mpd-clear)
+
+  (emms-player-mpd-update-all)
   (emms-cache-set-from-mpd-all)
+  (emms-player-mpd-connect)
   
   :custom
   (emms-player-mpd-server-name "localhost")
@@ -282,7 +291,7 @@
   (scroll-up-aggressively 0.0)
   (scroll-down-aggressively 0.0)
   (emms-player-mpd-music-directory "/home/poppy/Music")
-  (emms-browser-covers-file-extensions '("jpg" "png" "bmp" "gif" "tiff")))
+  (emms-browser-covers-file-extensions '("jpg" "png" "bmp" "gif")))
 
 
 (use-package emacs
