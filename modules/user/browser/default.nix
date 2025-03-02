@@ -1,8 +1,8 @@
 {
-  imports = [./firefox.nix];
+  imports = [./zen.nix];
 
   xdg.mimeApps.defaultApplications = let
-    default_browser = "firefox.desktop";
+    default_browser = "zen.desktop";
   in {
     "text/html" = default_browser;
     "x-scheme-handler/http" = default_browser;
@@ -19,5 +19,5 @@
     "application/x-extension-xht" = default_browser;
   };
 
-  home.sessionVariables.DEFAULT_BROWSER = "firefox";
+  home.sessionVariables.DEFAULT_BROWSER = "zen";
 }
