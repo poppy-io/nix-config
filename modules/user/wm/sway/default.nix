@@ -58,5 +58,6 @@
     wdisplays # GUI display manager for wlroots
     grim # flameshot requirement on wayland ?
     font-awesome
+    wtype # keyboard automation tool
   ];
 }

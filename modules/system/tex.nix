@@ -4,8 +4,10 @@ let
     inherit (pkgs.texlive) scheme-medium
       wrapfig amsmath ulem hyperref capt-of # org-mode requirements
       minted
-      upquote;
-  });
+      upquote
+      sectsty
+      printlen
+  ;});
 in
 {
   environment.systemPackages = [

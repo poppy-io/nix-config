@@ -4,7 +4,7 @@
       config = ./emacs.el;
       defaultInitFile = true;
       alwaysEnsure = true;
-      package = pkgs.emacs-pgtk;
+      package = pkgs.emacs-git-pgtk;
     })
 
     # language servers

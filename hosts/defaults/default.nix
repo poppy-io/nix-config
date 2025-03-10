@@ -29,6 +29,7 @@ in {
     ripgrep
     htop
     comma
+    gh
   ];
 
   users.defaultUserShell = pkgs.nushell;
