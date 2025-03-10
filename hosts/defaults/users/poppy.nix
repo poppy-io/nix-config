@@ -4,6 +4,8 @@ in {
   home.username = "poppy";
   home.homeDirectory = "/home/poppy";
 
+  nixpkgs.config.allowUnfree = true;
+
   imports = map (x: "${usrmodules}" + x) [
     "/shell"
     "/wm"
