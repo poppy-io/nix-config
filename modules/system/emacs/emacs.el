@@ -278,7 +278,7 @@
   (add-to-list 'emms-player-list 'emms-player-mpd)
   (add-hook 'emms-playlist-cleared-hook 'emms-player-mpd-clear)
 
-  (emms-player-mpd-update-all)
+  ; (emms-player-mpd-update-all)
   (emms-cache-set-from-mpd-all)
   (emms-player-mpd-connect)
   

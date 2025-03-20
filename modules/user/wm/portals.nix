@@ -8,6 +8,8 @@
       xdg-desktop-portal-gtk
     ];
 
-    config.common.default = "wlr";
+    config.common.default = "gtk";
   };
+
+  #home.packages = with pkgs; [gtk3];
 }
