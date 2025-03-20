@@ -16,6 +16,7 @@ in {
       "/vpn.nix"
       "/samba.nix"
       "/tex.nix"
+      "/ns-usb-loader.nix"
 
       "/emacs"
       "/games"
