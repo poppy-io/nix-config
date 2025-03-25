@@ -14,6 +14,7 @@
 
     alejandra # nix formatter
     gh # github cli
+    textidote
 
     emacs-all-the-icons-fonts
   ];
