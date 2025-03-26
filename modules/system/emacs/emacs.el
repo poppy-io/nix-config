@@ -26,6 +26,9 @@
   :config
   (exec-path-from-shell-initialize))
 
+;; stop backup clutter
+(setq make-backup-files nil)
+
 ;; set a cute theme for now until emacs overlay works with stylix
 (use-package doom-themes
   :config
@@ -131,6 +134,13 @@
   :config
   (add-hook 'prog-mode-hook 'flycheck-mode) ;; always lint
   (add-hook 'after-init-hook #'global-flycheck-mode))
+
+;; rich presence
+(use-package elcord
+  :custom
+  (elcord-editor-icon "Emacs (Legacy)")
+  (elcord-idle-message "Taking a nap..."))
+(add-hook 'after-init-hook 'elcord-mode)
 
 ;;;; LANGUAGE SUPPORT
 ;;; hook into language servers
