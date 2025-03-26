@@ -12,11 +12,11 @@
     #  flake = false;
     #};
 
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
+    #lix-module = {
+    #  url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
+    #  inputs.nixpkgs.follows = "nixpkgs";
     #  inputs.lix.follows = "lix";
-    };
+    #};
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -64,7 +64,7 @@
         modules = [
           {nixpkgs.hostPlatform = "x86_64-linux";}
 
-          inputs.lix-module.nixosModules.default
+          #inputs.lix-module.nixosModules.default
           inputs.aagl.nixosModules.default
           inputs.lanzaboote.nixosModules.lanzaboote
           inputs.spicetify-nix.nixosModules.default
