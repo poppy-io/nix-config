@@ -140,7 +140,24 @@
   :custom
   (elcord-editor-icon "Emacs (Legacy)")
   (elcord-idle-message "Taking a nap..."))
-(add-hook 'after-init-hook 'elcord-mode)
+(elcord-mode)
+
+;; startup screen
+(use-package grid)
+(use-package enlight
+  :custom
+  (enlight-content
+   (concat
+    "hello!"
+    "\n"
+    (enlight-menu
+     '(("orgmode"
+	("org-agenda (current day)" (org-agenda nil "a") "a"))
+       ("projects"
+	("configs" (projectile-switch-project-by-name "~/nix-config/") "n")
+	("dissertation" (projectile-switch-project-by-name "~/dev/dissertation/") "d")
+	("other" projectile-switch-project "p")))))))
+(setopt initial-buffer-choice #'enlight)
 
 ;;;; LANGUAGE SUPPORT
 ;;; hook into language servers

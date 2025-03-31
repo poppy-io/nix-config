@@ -1,5 +1,5 @@
 {
   nixpkgs.overlays = [
-    (import ./flameshot.nix)
+    #(import ./flameshot.nix)
   ];
 }
