@@ -1,29 +1,30 @@
-default: up rebuild
+default: upbuild
 
-rebuild:
-  nixos-rebuild switch --flake .
+build:
+  nh os switch .
 
 debug:
-  nixos-rebuild switch --flake . --show-trace --verbose
+  nh os switch . --verbose
 
 up:
   nix flake update
 
-# Update specific input
-# usage: make upp i=home-manager
-upp:
-  nix flake update $(i)
+upbuild:
+  nh os switch . --update --ask
+
+ask:
+  nh os switch . --ask
 
 history:
   nix profile history --profile /nix/var/nix/profiles/system
 
 repl:
-  nix repl -f flake:nixpkgs
+  nh os repl .
 
 clean:
   # remove all generations older than 7 days
-  sudo nix profile wipe-history --profile /nix/var/nix/profiles/system  --older-than 7d
+  nh clean all --keep-since 7d
 
 gc:
   # garbage collect all unused nix store entries
-  sudo nix-collect-garbage --delete-old
+  nix-collect-garbage --delete-old
