@@ -20,6 +20,7 @@ in {
     "/stylix.nix"
     "/yazi.nix"
     "/discord.nix"
+    "/bsky.nix"
   ];
 
   programs = {

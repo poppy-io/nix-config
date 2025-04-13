@@ -13,7 +13,7 @@
     #};
 
     #lix-module = {
-    #  url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
+    #  url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-3.tar.gz";
     #  inputs.nixpkgs.follows = "nixpkgs";
     #  inputs.lix.follows = "lix";
     #};
@@ -54,6 +54,11 @@
 
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    unofficial-homestuck-collection = {
+      url = "https://g.freya.cat/freya/unofficial-homestuck-collection-nix/raw/branch/main/flake.nix"
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
