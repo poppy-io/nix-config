@@ -32,6 +32,7 @@ in {
     htop
     comma
     gh
+    nss
   ];
 
   users.defaultUserShell = pkgs.nushell;

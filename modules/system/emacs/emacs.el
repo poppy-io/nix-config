@@ -191,10 +191,10 @@
   (lsp-ui-doc-enable nil))
 
 ;;; Nix
-(use-package nix-mode
-  :mode "\\.nix\\'"
-  :hook (nix-mode . lsp-deferred))
-(add-hook 'after-init-hook 'global-nix-prettify-mode)
+;;(use-package nix-mode
+;;  :mode "\\.nix\\'"
+;;  :hook (nix-mode . lsp-deferred))
+;;(add-hook 'after-init-hook 'global-nix-prettify-mode)
 
 (use-package company-nixos-options)
 (add-to-list 'company-backends 'company-nixos-options)
