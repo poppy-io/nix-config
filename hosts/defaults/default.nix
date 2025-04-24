@@ -33,13 +33,14 @@ in {
     comma
     gh
     nss
+    wl-clicker
   ];
 
   users.defaultUserShell = pkgs.nushell;
 
   users.users.poppy = {
     isNormalUser = true;
-    extraGroups = ["wheel"];
+    extraGroups = ["wheel" "input"];
   };
 
   security.pam.loginLimits = [

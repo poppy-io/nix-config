@@ -58,7 +58,7 @@
     };
 
     unofficial-homestuck-collection = {
-      url = "https://g.freya.cat/freya/unofficial-homestuck-collection-nix/raw/branch/main/flake.nix"
+      url = "git+https://g.freya.cat/freya/unofficial-homestuck-collection-nix/?ref=main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
