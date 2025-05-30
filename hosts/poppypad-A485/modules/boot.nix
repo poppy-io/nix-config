@@ -1,8 +1,8 @@
 {
   boot.loader = {
     grub = {
-      efiSupport = true;
-      device = "nodev";
+      #efiSupport = true;
+      #device = "nodev";
     };
   };
 }

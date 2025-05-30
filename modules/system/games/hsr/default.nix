@@ -10,7 +10,7 @@ in {
     enable = true;
     package = aaglPkgs.honkers-railway-launcher.override (old: {
       unwrapped = old.unwrapped.override {
-        inherit customIcon;
+#        inherit customIcon;
       };
     });
   };

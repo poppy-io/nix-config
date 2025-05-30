@@ -15,5 +15,6 @@
     ./hk3
     ./hsr
     ./zzz
+    ./gstreamer.nix
   ];
 }

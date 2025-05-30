@@ -3,7 +3,7 @@
     ./keybinds.nix
   ];
 
-  # tiling window manager. replaced with swayfx under the hood (probably)
+  # tiling window manager
   wayland.windowManager.sway = {
     enable = true;
     systemd.enable = true;
@@ -13,7 +13,7 @@
       modifier = "Mod4";
       terminal = "ghostty";
       startup = [
-        {command = "exec systemctl --user import-environment PATH && systemctl --user restart xdg-desktop-portal.service";}
+        {command = "exec systemctl --user import-environment PATH && source ~/.profile && systemctl --user restart xdg-desktop-portal.service";}
         {command = "vesktop";}
       ];
 

@@ -14,7 +14,7 @@
       visualizer_type = "spectrum";
       visualizer_spectrum_smooth_look = "yes";
       visualizer_fps = "255";
-      visualizer_look = "██";
+      visualizer_look = "##";
 
       # tabs
       screen_switcher_mode = "playlist, media_library, playlist_editor, lyrics, last_fm";

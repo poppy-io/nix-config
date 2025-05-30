@@ -2,8 +2,8 @@
   description = "poppy io's signature home-style flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs";
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
     NUR.url = "github:nix-community/NUR";
     stylix.url = "github:danth/stylix";
 
@@ -33,10 +33,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.2";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #lanzaboote = {
+    #  url = "github:nix-community/lanzaboote/v0.4.2";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
@@ -61,6 +61,8 @@
       url = "git+https://g.freya.cat/freya/unofficial-homestuck-collection-nix/?ref=main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs = {nixpkgs, ...} @ inputs: {
@@ -71,8 +73,9 @@
 
           #inputs.lix-module.nixosModules.default
           inputs.aagl.nixosModules.default
-          inputs.lanzaboote.nixosModules.lanzaboote
+          #inputs.lanzaboote.nixosModules.lanzaboote
           inputs.spicetify-nix.nixosModules.default
+	  inputs.nix-flatpak.nixosModules.nix-flatpak
 
           {
             # should move this to a package by package override at some point
@@ -106,7 +109,7 @@
         modules = [
           {nixpkgs.hostPlatform = "x86_64-linux";}
 
-          inputs.lix-module.nixosModules.default
+          #inputs.lix-module.nixosModules.default
           inputs.spicetify-nix.nixosModules.default
 
           {

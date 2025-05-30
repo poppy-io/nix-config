@@ -17,6 +17,7 @@ in {
       "/samba.nix"
       "/tex.nix"
       "/ns-usb-loader.nix"
+      "/flatpak.nix"
 
       "/emacs"
       "/games"

@@ -20,7 +20,6 @@ in {
       wineWowPackages.waylandFull
       winetricks
       unrar
-      lutris
 
       xdelta
       p7zip

@@ -1,7 +1,15 @@
 {
   boot = {
-    loader = {
+    loader = {  
       efi.canTouchEfiVariables = true;
+      efi.efiSysMountPoint = "/boot";
+      grub.devices = ["nodev"];
+      grub.efiSupport = true;
+      #grub.efiInstallAsRemovable = true;
+      grub.enable = true;
+      grub.useOSProber = true;
+      #systemd-boot.enable = true;
+
     };
 
     plymouth = {
