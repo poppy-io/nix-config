@@ -1,7 +1,7 @@
 let
   sysmodules = ./. + "/../../modules/system";
 in {
-  networking.hostName = "poppybox";
+  networking.hostName = "puppybox";
 
   imports =
     [

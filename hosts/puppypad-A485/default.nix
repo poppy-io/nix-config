@@ -1,7 +1,7 @@
 let
   sysmodules = ./. + "../../modules/system";
 in {
-  networking.hostName = "poppypad-A485";
+  networking.hostName = "puppypad-A485";
   services.logrotate.checkConfig = false;
 
   imports =

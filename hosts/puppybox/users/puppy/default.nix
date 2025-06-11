@@ -3,20 +3,12 @@
 in {
   imports =
     map (x: "${usrmodules}" + x) [
-      "/shell"
-      "/wm"
-      "/editor"
-      "/browser"
-      "/terminal"
-      "/music"
-
-      "/git.nix"
-      "/stylix.nix"
-      "/yazi.nix"
-      "/discord.nix"
+      "/xivlauncher.nix"
+      "/ebooks/calibre.nix"
+      "/ebooks/sftp.nix"
     ]
     ++ [
-      ../../../defaults/users/poppy.nix
+      ../../../defaults/users/puppy.nix
       ./modules
     ];
 
@@ -28,10 +20,15 @@ in {
       wineWowPackages.waylandFull
       winetricks
       unrar
-      lutris
+
+      xdelta
       p7zip
+      xivlauncher
+      sway-contrib.grimshot # screenshot tool
       vlc
-      quodlibet
+      #wayrecord  # screenrecord tool
+
+      jdk8
       onlyoffice-bin
     ];
   };

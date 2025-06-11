@@ -1,8 +1,8 @@
 {config, ...}: let
   usrmodules = ./. + "../../../../modules/user";
 in {
-  home.username = "poppy";
-  home.homeDirectory = "/home/poppy";
+  home.username = "puppy";
+  home.homeDirectory = "/home/puppy";
 
   nixpkgs.config.allowUnfree = true;
 
@@ -21,6 +21,7 @@ in {
     "/yazi.nix"
     "/discord.nix"
     "/bsky.nix"
+    "/nautilus.nix"
   ];
 
   programs = {

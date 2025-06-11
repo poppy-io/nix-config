@@ -5,7 +5,7 @@
 }: {
   wayland.windowManager.sway.config.keybindings = let
     flameshot = lib.getExe (pkgs.flameshot.override { enableWlrSupport = true; });
-    xdg-user-dir = "~/pictures";
+    xdg-user-dir = "~/pictures/screenshots";
   in
     lib.mkOptionDefault {
       ## Screenshot

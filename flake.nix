@@ -67,7 +67,7 @@
 
   outputs = {nixpkgs, ...} @ inputs: {
     nixosConfigurations = {
-      "poppybox" = nixpkgs.lib.nixosSystem {
+      "puppybox" = nixpkgs.lib.nixosSystem {
         modules = [
           {nixpkgs.hostPlatform = "x86_64-linux";}
 
@@ -88,7 +88,7 @@
           }
 
           ./hosts/defaults
-          ./hosts/poppybox
+          ./hosts/puppybox
 
           inputs.home-manager.nixosModules.home-manager
           {
@@ -96,7 +96,7 @@
             home-manager.backupFileExtension = "backup";
 
             home-manager.extraSpecialArgs = {inherit inputs;};
-            home-manager.users.poppy = import ./hosts/poppybox/users/poppy;
+            home-manager.users.puppy = import ./hosts/puppybox/users/puppy;
           }
 
           (import ./overlays)
@@ -105,7 +105,7 @@
         specialArgs = {inherit inputs;};
       };
 
-      "poppypad-A485" = inputs.nixpkgs.lib.nixosSystem {
+      "puppypad-A485" = inputs.nixpkgs.lib.nixosSystem {
         modules = [
           {nixpkgs.hostPlatform = "x86_64-linux";}
 
@@ -122,7 +122,7 @@
           }
 
           ./hosts/defaults
-          ./hosts/poppypad-A485
+          ./hosts/puppypad-A485
 
           inputs.home-manager.nixosModules.home-manager
           {
@@ -130,7 +130,7 @@
             home-manager.backupFileExtension = "backup";
 
             home-manager.extraSpecialArgs = {inherit inputs;};
-            home-manager.users.poppy = import ./hosts/poppypad-A485/users/poppy;
+            home-manager.users.puppy = import ./hosts/puppypad-A485/users/puppy;
           }
 
           (import ./overlays)

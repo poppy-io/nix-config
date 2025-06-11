@@ -3,32 +3,34 @@
 in {
   imports =
     map (x: "${usrmodules}" + x) [
-      "/xivlauncher.nix"
-      "/ebooks/calibre.nix"
-      "/ebooks/sftp.nix"
+      "/shell"
+      "/wm"
+      "/editor"
+      "/browser"
+      "/terminal"
+      "/music"
+
+      "/git.nix"
+      "/stylix.nix"
+      "/yazi.nix"
+      "/discord.nix"
     ]
     ++ [
-      ../../../defaults/users/poppy.nix
+      ../../../defaults/users/puppy.nix
       ./modules
     ];
 
   home = {
     packages = with pkgs; [
-      hyfetch
       wmenu
       clinfo
       wineWowPackages.waylandFull
       winetricks
       unrar
-
-      xdelta
+      lutris
       p7zip
-      xivlauncher
-      sway-contrib.grimshot # screenshot tool
       vlc
-      #wayrecord  # screenrecord tool
-
-      jdk8
+      quodlibet
       onlyoffice-bin
     ];
   };
