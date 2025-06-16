@@ -75,7 +75,7 @@
           inputs.aagl.nixosModules.default
           #inputs.lanzaboote.nixosModules.lanzaboote
           inputs.spicetify-nix.nixosModules.default
-	  inputs.nix-flatpak.nixosModules.nix-flatpak
+	        inputs.nix-flatpak.nixosModules.nix-flatpak
 
           {
             # should move this to a package by package override at some point
