@@ -14,7 +14,6 @@ in {
       "/torrent.nix"
       "/bottles.nix"
       "/vpn.nix"
-      "/samba.nix"
       "/tex.nix"
       "/ns-usb-loader.nix"
       "/flatpak.nix"

@@ -2,7 +2,7 @@
   # make sure to also add system/mpdscribble.nix for scrobbling!
   services.mpd = {
     enable = true;
-    musicDirectory = "/home/poppy/Music";
+    musicDirectory = "/home/puppy/music";
     extraConfig = ''
       audio_output {
         type "pipewire"

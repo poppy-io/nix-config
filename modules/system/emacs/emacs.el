@@ -342,7 +342,7 @@
   (emms-browser-thumbnail-filter 'emms-browser-thumbnail-filter-all)
   (scroll-up-aggressively 0.0)
   (scroll-down-aggressively 0.0)
-  (emms-player-mpd-music-directory "/home/poppy/Music")
+  (emms-player-mpd-music-directory "/home/puppy/Music")
   (emms-browser-covers-file-extensions '("jpg" "png" "bmp" "gif")))
 
 
