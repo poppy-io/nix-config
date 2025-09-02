@@ -13,7 +13,7 @@ in {
       "/android.nix"
       "/torrent.nix"
       "/bottles.nix"
-      "/vpn.nix"
+      "/vpn"
       "/tex.nix"
       "/ns-usb-loader.nix"
       "/flatpak.nix"

@@ -2,6 +2,7 @@
   imports = [
     ./networking.nix
     ./swap.nix
-#    ./secureboot.nix
+    #    ./secureboot.nix
+    ./graphics.nix
   ];
 }

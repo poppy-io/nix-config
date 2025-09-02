@@ -1,6 +1,6 @@
 {
   imports = [
-    #./retroarch.nix
+    ./retroarch.nix
     ./controllers.nix
     
     ./ryujinx.nix

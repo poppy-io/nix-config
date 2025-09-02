@@ -1,5 +1,5 @@
 { pkgs, ...}: {
-  environment.systemPackages = [
+  home.packages = [
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs
