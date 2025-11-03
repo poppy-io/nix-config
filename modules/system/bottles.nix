@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    bottles
+    (bottles.override { removeWarningPopup = true; })
     wine
     winetricks
   ];

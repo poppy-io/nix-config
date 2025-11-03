@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs.nushell = {
-    enable = true;
+    enable = false;
 
     configFile.source = ./config.nu;
     envFile.source = ./env.nu;
@@ -13,7 +13,8 @@
       nrb = "sudo nixos-rebuild switch";
     };
   };
-
+  
+  #TODO: move to file separate from nushell configs?
   programs.carapace = {
     enable = true;
     enableNushellIntegration = true;
@@ -37,6 +38,6 @@
   };
 
   home.packages = with pkgs; [
-    nu_scripts
+    #nu_scripts
   ];
 }

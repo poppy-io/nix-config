@@ -5,7 +5,3 @@
 # Direnv
 .direnv/
 .envrc
-
-# Secrets
-secrets/
-.projectile-cache.eld

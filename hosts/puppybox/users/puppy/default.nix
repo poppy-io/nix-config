@@ -30,7 +30,7 @@ in {
       #wayrecord  # screenrecord tool
 
       jdk8
-      onlyoffice-bin
+      onlyoffice-desktopeditors
     ];
   };
 

@@ -5,7 +5,7 @@
       ipafont
       nerd-fonts.iosevka-term
       nerd-fonts.iosevka-term-slab
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       noto-fonts
       prociono
       eurofurence

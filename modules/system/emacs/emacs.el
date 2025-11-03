@@ -136,6 +136,8 @@
   (add-hook 'prog-mode-hook 'flycheck-mode) ;; always lint
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
+(use-package vterm)
+
 ;; rich presence
 (use-package elcord
   :custom
@@ -190,6 +192,11 @@
   (lsp-ui-peek-always-show t)
   (lsp-ui-sideline-show-hover t)
   (lsp-ui-doc-enable nil))
+
+;;; Docker
+(use-package docker
+  :bind ("C-c d" . docker))
+(use-package dockerfile-mode)
 
 ;;; Nix
 (use-package nix-mode

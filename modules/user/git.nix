@@ -1,7 +1,9 @@
 {
   programs.git = {
     enable = true;
-    userName = "Poppy -";
-    userEmail = "me@poppyio.com";
+    settings = {
+      user.name = "Poppy -";
+      user.email = "me@poppyio.com";
+    };
   };
 }

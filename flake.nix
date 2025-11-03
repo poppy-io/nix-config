@@ -48,12 +48,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
-    };
-
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    agenix = {
+      url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -68,14 +69,15 @@
   outputs = {nixpkgs, ...} @ inputs: {
     nixosConfigurations = {
       "puppybox" = nixpkgs.lib.nixosSystem {
-        modules = [
+        modules = with inputs; [
           {nixpkgs.hostPlatform = "x86_64-linux";}
 
-          #inputs.lix-module.nixosModules.default
-          inputs.aagl.nixosModules.default
-          #inputs.lanzaboote.nixosModules.lanzaboote
-          inputs.spicetify-nix.nixosModules.default
-	        inputs.nix-flatpak.nixosModules.nix-flatpak
+          #lix-module.nixosModules.default
+          aagl.nixosModules.default
+          #lanzaboote.nixosModules.lanzaboote
+          spicetify-nix.nixosModules.default
+	        nix-flatpak.nixosModules.nix-flatpak
+          agenix.nixosModules.default
 
           {
             # should move this to a package by package override at some point
@@ -90,7 +92,7 @@
           ./hosts/defaults
           ./hosts/puppybox
 
-          inputs.home-manager.nixosModules.home-manager
+          home-manager.nixosModules.home-manager
           {
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
@@ -106,11 +108,12 @@
       };
 
       "puppypad-A485" = inputs.nixpkgs.lib.nixosSystem {
-        modules = [
+        modules = with inputs; [
           {nixpkgs.hostPlatform = "x86_64-linux";}
 
-          #inputs.lix-module.nixosModules.default
-          inputs.spicetify-nix.nixosModules.default
+          #lix-module.nixosModules.default
+          spicetify-nix.nixosModules.default
+          agenix.nixosModules.default
 
           {
             nixpkgs.config.allowUnfree = true;
@@ -124,7 +127,7 @@
           ./hosts/defaults
           ./hosts/puppypad-A485
 
-          inputs.home-manager.nixosModules.home-manager
+          home-manager.nixosModules.home-manager
           {
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";

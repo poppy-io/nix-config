@@ -7,6 +7,9 @@ in {
     "/gc.nix"
     "/nh.nix"
     "/portals.nix"
+    "/docker.nix"
+    "/ssh.nix"
+    "/secrets.nix"
 
     "/boot.nix"
     "/greetd.nix"
@@ -22,10 +25,13 @@ in {
     "/theming"
 
     "/mpdscribble.nix"
+  ] ++ [
+    ../../secrets
   ];
 
   environment.systemPackages = with pkgs; [
     git
+    git-lfs
     curl
     wget
     ripgrep
@@ -35,16 +41,16 @@ in {
     nss
   ];
 
-  users.defaultUserShell = pkgs.nushell;
+  users.defaultUserShell = pkgs.bash;
 
   users.users.puppy = {
     isNormalUser = true;
-    extraGroups = ["wheel" "input"];
+    extraGroups = ["wheel" "input" "docker"];
   };
 
   users.users.poppy = {
     isNormalUser = true;
-    extraGroups = ["wheel" "input"];
+    extraGroups = [];
   };
 
   security.pam.loginLimits = [
@@ -64,28 +70,6 @@ in {
   # required for fcitx5
   services.xserver.desktopManager.runXdgAutostartIfNone = true;
 
-  ## replaced with nh; see /modules/system/nh.nix
-  ## was buggy and shell-dependent anyway
-  # show pretty nushell diff results
-  #system.activationScripts.diff = ''
-  #  if [[ -e /run/current-system ]]; then
-  #    echo
-  #    ${pkgs.nushell}/bin/nu -c "let diff_closure = ${pkgs.nix}/bin/nix store diff-closures /run/current-system '$systemConfig'; if \$diff_closure != \"\" {
-  #      let table = \$diff_closure
-  #      | lines
-  #      | where \$it =~ KiB
-  #      | where \$it =~ →
-  #      | parse -r '^(?<Package>\S+): (?<Old_Version>[^,]+)(?:.*) → (?<New_Version>[^,]+)(?:.*, )(?<DiffBin>.*)$'
-  #      | insert Diff {
-  #        get DiffBin
-  #        | ansi strip
-  #        | str trim -l -c '+'
-  #        | into filesize
-  #      }
-  #      | reject DiffBin
-  #      | sort-by -r Diff; print \$table; \$table
-  #      | math sum
-  #    }"
-  #  fi
-  #'';
+  # required for uv
+  environment.localBinInPath = true;
 }
