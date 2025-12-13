@@ -4,7 +4,7 @@ build:
   nh os switch .
 
 debug:
-  nh os switch . --verbose
+  nh os switch . -t --verbose
 
 up:
   nix flake update

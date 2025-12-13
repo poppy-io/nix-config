@@ -25,8 +25,6 @@ in {
     "/theming"
 
     "/mpdscribble.nix"
-  ] ++ [
-    ../../secrets
   ];
 
   environment.systemPackages = with pkgs; [

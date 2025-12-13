@@ -4,10 +4,10 @@
   
   
   services.mpdscribble = {
-    enable = true;
+    enable = false;
     endpoints."last.fm" = {
       username = "poppy_io";
-      passwordFile = config.age.secrets.lastfm.path;
+      #passwordFile = config.age.secrets.lastfm.path;
     };
   };
 }

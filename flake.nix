@@ -53,10 +53,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    agenix = {
-      url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #agenix = {
+    #  url = "github:ryantm/agenix";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     unofficial-homestuck-collection = {
       url = "git+https://g.freya.cat/freya/unofficial-homestuck-collection-nix/?ref=main";
@@ -77,7 +77,7 @@
           #lanzaboote.nixosModules.lanzaboote
           spicetify-nix.nixosModules.default
 	        nix-flatpak.nixosModules.nix-flatpak
-          agenix.nixosModules.default
+          #agenix.nixosModules.default
 
           {
             # should move this to a package by package override at some point
@@ -113,7 +113,7 @@
 
           #lix-module.nixosModules.default
           spicetify-nix.nixosModules.default
-          agenix.nixosModules.default
+          #agenix.nixosModules.default
 
           {
             nixpkgs.config.allowUnfree = true;

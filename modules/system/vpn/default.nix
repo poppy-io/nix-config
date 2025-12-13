@@ -24,5 +24,15 @@
         password = "vpn";
       };
     };
+
+    us = {
+      config = "config ${./us-gate.conf}";
+      autoStart = false;
+      updateResolvConf = true;
+      authUserPass = {
+        username = "vpn";
+        password = "vpn";
+      };
+    };
   };
 }
