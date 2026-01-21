@@ -12,5 +12,7 @@
     wlr.enable = true;
   };
 
+  #services.gvfs.enable = true;
+
   #home.packages = with pkgs; [gtk3];
 }

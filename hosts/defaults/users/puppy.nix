@@ -22,6 +22,7 @@ in {
     "/discord.nix"
     "/bsky.nix"
     "/nautilus.nix"
+    "/protonplus.nix"
   ];
 
   programs = {

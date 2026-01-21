@@ -39,8 +39,8 @@ in {
       };
 
       sansSerif = {
-        package = pkgs.manrope;
-        name = "Manrope";
+        package = pkgs.nerd-fonts.ubuntu;
+        name = "Ubuntu Nerd Font";
       };
 
       monospace = {

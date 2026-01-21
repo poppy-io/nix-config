@@ -37,6 +37,7 @@ in {
     comma
     gh
     nss
+    theclicker
   ];
 
   users.defaultUserShell = pkgs.bash;

@@ -9,7 +9,7 @@
       noto-fonts
       prociono
       eurofurence
-      manrope
+      nerd-fonts.ubuntu
     ];
 
     fontconfig = {
@@ -24,7 +24,7 @@
         ];
 
         sansSerif = [
-          "Manrope"
+          "Ubuntu Nerd Font"
           "IosevkaTerm Nerd Font"
           "Sarasa Gothic"
         ];

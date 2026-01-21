@@ -17,6 +17,7 @@ in {
       "/tex.nix"
       "/ns-usb-loader.nix"
       "/flatpak.nix"
+      "/hubstaff.nix"
 
       "/emacs"
       "/games"
