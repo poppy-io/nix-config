@@ -61,6 +61,8 @@ in {
     }
   ];
 
+  boot.kernelModules = ["ntsync"];
+
   home-manager.backupFileExtension = "backup";
 
   services.gnome.gnome-keyring.enable = true;
