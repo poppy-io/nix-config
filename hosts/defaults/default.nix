@@ -1,4 +1,4 @@
-{pkgs, ...}: let
+{pkgs, config, ...}: let
   sysmodules = ./. + "/../../modules/system";
 in {
   imports = map (x: "${sysmodules}" + x) [
@@ -61,7 +61,8 @@ in {
     }
   ];
 
-  boot.kernelModules = ["ntsync"];
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.extraModulePackages = with config.boot.kernelPackages; [ ntsync ];
 
   home-manager.backupFileExtension = "backup";
 
