@@ -62,7 +62,7 @@ in {
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.extraModulePackages = with config.boot.kernelPackages; [ ntsync ];
+  boot.kernelModules = [ "ntsync" ];
 
   home-manager.backupFileExtension = "backup";
 
