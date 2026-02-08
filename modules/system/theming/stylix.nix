@@ -3,7 +3,10 @@
   pkgs,
   ...
 }: let
-  inputImage = ./wallpaper_inverted.png;
+  inputImage = builtins.fetchurl {
+    url="https://img2.gelbooru.com/images/fa/15/fa1592597e895a0db166365a0a8af257.jpg";
+    sha256="sha256:0idxvsayzj6g9ll56sxhvbbsq0q0k5qxnib5g8yrx1wfhfqkzy7p";
+  };
   colourscheme = "zenburn";
   theme = "${pkgs.base16-schemes}/share/themes/${colourscheme}.yaml";
 in {
