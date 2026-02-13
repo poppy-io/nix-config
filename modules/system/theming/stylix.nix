@@ -18,7 +18,7 @@ in {
     enable = true;
     base16Scheme = theme;
 
-    image = pkgs.runCommandNoCC "image.png" {buildInputs = [pkgs.lutgen];} ''
+    image = pkgs.runCommand "image.png" {buildInputs = [pkgs.lutgen];} ''
       lutgen apply -s 128 ${inputImage} -o $out -p ${colourscheme};
     '';
 
