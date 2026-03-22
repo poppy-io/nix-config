@@ -18,6 +18,7 @@ in {
       "/ns-usb-loader.nix"
       "/flatpak.nix"
       "/hubstaff.nix"
+      "/davinci-resolve.nix"
 
       "/emacs"
       "/games"

@@ -1,3 +1,5 @@
-{pkgs, ...}: {
-  environment.systemPackages = with pkgs; [ duckstation ];
+{
+  services.flatpak.packages = [
+    "org.duckstation.DuckStation"
+  ];
 }

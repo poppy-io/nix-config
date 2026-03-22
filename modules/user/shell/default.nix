@@ -1,5 +1,11 @@
 {
-  imports = [./nushell ./bash];
+  imports = [
+    ./zsh
+    
+    ./carapace.nix
+    ./direnv.nix
+    ./starship.nix 
+  ];
 
   home.shellAliases = {
     doas = "sudo";

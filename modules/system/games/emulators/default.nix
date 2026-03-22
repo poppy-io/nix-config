@@ -1,6 +1,7 @@
 {
   imports = [
     ./dolphin.nix
-    ./duckstation.nix 
+    ./duckstation.nix
+    ./melonds.nix
   ];
 }

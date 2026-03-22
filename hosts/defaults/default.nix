@@ -40,7 +40,7 @@ in {
     theclicker
   ];
 
-  users.defaultUserShell = pkgs.bash;
+  users.defaultUserShell = pkgs.zsh;
 
   users.users.puppy = {
     isNormalUser = true;

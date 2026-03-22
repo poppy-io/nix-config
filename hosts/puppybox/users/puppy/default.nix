@@ -6,7 +6,8 @@ in {
       "/xivlauncher.nix"
       "/ebooks/calibre.nix"
       "/ebooks/sftp.nix"
-      "/streaming/"
+      "/ardour.nix"
+      "/streaming"
     ]
     ++ [
       ../../../defaults/users/puppy.nix
