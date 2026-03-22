@@ -1,6 +1,6 @@
 {
   nix.settings = {
-    trusted-users = ["poppy"];
+    trusted-users = ["puppy"];
 
     substituters = [
       "https://cache.nixos.org"

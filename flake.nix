@@ -1,5 +1,5 @@
 {
-  description = "poppy io's signature home-style flake";
+  description = "puppy io's signature home-style flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";

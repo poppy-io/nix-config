@@ -15,6 +15,6 @@
       adblock
       shuffle
     ];
-    theme = spicePkgs.themes.text;
+    #theme = spicePkgs.themes.text;
   };
 }

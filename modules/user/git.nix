@@ -1,11 +1,13 @@
 {
   programs.git = {
-    enable = true;
-    settings = {
-      user.name = "Poppy -";
-      user.email = "me@poppyio.com";
-    };
-    
+    enable = true;    
     signing.format = null; # new default: legacy is "openpgp"
+
+    settings = {
+      user = {
+        name = "poppy -";
+        email = "me@poppyio.com";
+      };
+    };
   };
 }

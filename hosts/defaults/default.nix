@@ -41,15 +41,11 @@ in {
   ];
 
   users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
 
   users.users.puppy = {
     isNormalUser = true;
     extraGroups = ["wheel" "input" "docker"];
-  };
-
-  users.users.poppy = {
-    isNormalUser = true;
-    extraGroups = [];
   };
 
   security.pam.loginLimits = [
