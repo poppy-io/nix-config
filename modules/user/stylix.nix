@@ -2,7 +2,7 @@
   stylix.targets = {
     ghostty.enable = true;
     yazi.enable = true;
-
+    vesktop.enable = true;
     spicetify.enable = true;
   };
 

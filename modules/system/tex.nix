@@ -7,6 +7,9 @@ let
       upquote
       sectsty
       printlen
+      enumitem
+      fontawesome5
+      titlesec
   ;});
 in
 {

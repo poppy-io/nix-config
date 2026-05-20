@@ -4,6 +4,6 @@ final: prev: {
       "-DUSE_WAYLAND_CLIPBOARD=1"
       "-DUSE_WAYLAND_GRIM=1"
     ];
-    buildInputs = previousAttrs.buildInputs ++ [final.libsForQt5.kguiaddons];
+    buildInputs = previousAttrs.buildInputs ++ [kdePackages.extra-cmake-modules];
   });
 }

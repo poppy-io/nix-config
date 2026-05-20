@@ -19,7 +19,7 @@ in {
       hyfetch
       wmenu
       clinfo
-      wineWowPackages.waylandFull
+      wineWow64Packages.waylandFull
       winetricks
       unrar
 

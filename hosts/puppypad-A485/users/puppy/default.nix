@@ -24,7 +24,7 @@ in {
     packages = with pkgs; [
       wmenu
       clinfo
-      wineWowPackages.waylandFull
+      wineWow64Packages.waylandFull
       winetricks
       unrar
       lutris

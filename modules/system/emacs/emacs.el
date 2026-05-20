@@ -152,13 +152,17 @@
   (enlight-content
    (concat
     "hello!"
-    "\n"
+    "\n\n"
+    (substring
+     (shell-command-to-string "~/dev/dao/dao jc")
+     0 -1)
+    "\n\n"
     (enlight-menu
      '(("orgmode"
 	("org-agenda (current day)" (org-agenda nil "a") "a"))
        ("projects"
 	("configs" (projectile-switch-project-by-name "~/nix-config/") "n")
-	("dissertation" (projectile-switch-project-by-name "~/dev/dissertation/") "d")
+	("cv" (projectile-switch-project-by-name "~/dev/cv/") "c")
 	("other" projectile-switch-project "p")))))))
 (setopt initial-buffer-choice #'enlight)
 

@@ -3,10 +3,7 @@
   pkgs,
   ...
 }: let
-  inputImage = builtins.fetchurl {
-    url="https://img2.gelbooru.com/images/fa/15/fa1592597e895a0db166365a0a8af257.jpg";
-    sha256="sha256:0idxvsayzj6g9ll56sxhvbbsq0q0k5qxnib5g8yrx1wfhfqkzy7p";
-  };
+  inputImage = ./wall_test.jpg;
   colourscheme = "zenburn";
   theme = "${pkgs.base16-schemes}/share/themes/${colourscheme}.yaml";
 in {
@@ -18,9 +15,10 @@ in {
     enable = true;
     base16Scheme = theme;
 
-    image = pkgs.runCommand "image.png" {buildInputs = [pkgs.lutgen];} ''
+    image =
+      pkgs.runCommand "image.png" {buildInputs = [pkgs.lutgen];} ''
       lutgen apply -s 128 ${inputImage} -o $out -p ${colourscheme};
-    '';
+      '';
 
     #opacity = {
     #  applications = 0.7;

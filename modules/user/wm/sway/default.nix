@@ -44,7 +44,7 @@
   };
 
   services.flameshot = {
-    enable = true;
+    enable = false;
     package = pkgs.flameshot.override { enableWlrSupport = true; };
     settings = {
       General = {
