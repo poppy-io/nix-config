@@ -15,10 +15,10 @@ in {
     enable = true;
     base16Scheme = theme;
 
-    image =
-      pkgs.runCommand "image.png" {buildInputs = [pkgs.lutgen];} ''
-      lutgen apply -s 128 ${inputImage} -o $out -p ${colourscheme};
-      '';
+    image = inputImage;
+            #pkgs.runCommand "image.png" {buildInputs = [pkgs.lutgen];} ''
+            #                lutgen apply -s 128 ${inputImage} -o $out -p ${colourscheme};
+            #                '';
 
     #opacity = {
     #  applications = 0.7;

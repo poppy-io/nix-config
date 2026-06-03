@@ -8,6 +8,7 @@ in {
       "/ebooks/sftp.nix"
       "/ardour.nix"
       "/streaming"
+      "/dusklight.nix"
     ]
     ++ [
       ../../../defaults/users/puppy.nix
