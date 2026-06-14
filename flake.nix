@@ -59,7 +59,7 @@
     };
 
     dusklight = {
-      url = "github:TwilitRealm/dusklight";
+      url ="git+https://github.com/TwilitRealm/dusklight?ref=main&submodules=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

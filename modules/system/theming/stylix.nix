@@ -54,5 +54,9 @@ in {
         name = "Noto Color Emoji";
       };
     };
+
+    targets = {
+      kmscon.enable = false;
+    };
   };
 }

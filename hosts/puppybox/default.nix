@@ -19,7 +19,6 @@ in {
       "/flatpak.nix"
       "/hubstaff.nix"
       "/davinci-resolve.nix"
-      "/ai.nix"
 
       "/emacs"
       "/games"

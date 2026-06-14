@@ -9,6 +9,7 @@ in {
       "/ardour.nix"
       "/streaming"
       "/dusklight.nix"
+      "/ai.nix"
     ]
     ++ [
       ../../../defaults/users/puppy.nix
